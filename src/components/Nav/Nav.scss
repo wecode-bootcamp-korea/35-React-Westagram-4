@@ -1,0 +1,230 @@
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid rgb(185, 184, 184);
+  z-index: 10;
+  background-color: #fafafa;
+
+  .nav-fix {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+
+    .nav-search {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 250px;
+        height: 30px;
+        text-align: center;
+        border: 2px solid rgb(185, 184, 184);
+        border-radius: 4px;
+        font-size: 15px;
+      }
+
+      .search-info {
+        position: absolute;
+        top: 80px;
+        width: 250px;
+        height: 270px;
+        z-index: 10;
+        border: 1px solid rgb(209, 209, 209);
+        background-color: #fff;
+        border-radius: 5px;
+        justify-content: center;
+        flex-direction: column;
+        display: none;
+
+        &::after {
+          content: '';
+          position: absolute;
+          border-style: solid;
+          border-width: 0 15px 15px;
+          border-color: #ffffff transparent;
+          display: block;
+          width: 0;
+          z-index: 1;
+          top: -15px;
+          left: 110px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          border-style: solid;
+          border-width: 0 16px 16px;
+          border-color: rgb(209, 209, 209) transparent;
+          display: block;
+          width: 0;
+          z-index: 0;
+          top: -16px;
+          left: 109px;
+        }
+
+        .info-box {
+          display: flex;
+          align-items: center;
+          height: 90px;
+
+          .search-info-imgbox {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+
+          .search-info-idandnick {
+            display: flex;
+            flex-direction: column;
+
+            .search-info-first {
+              font-size: 17px;
+              margin-left: 3px;
+            }
+
+            .search-info-id {
+              font-weight: bold;
+            }
+
+            .search-info-nickname {
+              color: gray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+
+    .nav-title {
+      font-size: 40px;
+      font-family: 'Lobster', cursive;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+
+      span {
+        font-size: 40px;
+        padding-bottom: 10px;
+      }
+    }
+
+    .insta-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .nav-icon_underdot {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px;
+        cursor: pointer;
+      }
+
+      .user-info {
+        z-index: 10;
+        position: absolute;
+        border: 1px solid rgb(209, 209, 209);
+        top: 60px;
+        right: 5px;
+        border-radius: 8px;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+        width: 250px;
+        font-size: 18px;
+        display: none;
+
+        .info-logout {
+          border-top: 1px solid rgb(206, 206, 206);
+          padding-top: 10px;
+          padding-left: 10px;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          border-style: solid;
+          border-width: 0 15px 15px;
+          border-color: #fff transparent;
+          display: block;
+          width: 0;
+          z-index: 1;
+          top: -15px;
+          left: 200px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          border-style: solid;
+          border-width: 0 15px 15px;
+          border-color: rgb(209, 209, 209) transparent;
+          display: block;
+          width: 0;
+          z-index: 0;
+          top: -16px;
+          left: 200px;
+        }
+
+        p {
+          padding: 10px 0;
+
+          i {
+            text-align: center;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  * {
+    max-width: 100%;
+  }
+  .nav .nav-fix .nav-search {
+    display: none;
+  }
+
+  .nav .logo-title .insta-icon,
+  .nav .logo-title .nav-title span {
+    display: none;
+  }
+  .nav .nav-icons .nav-icon_underdot .user-info {
+    opacity: 0;
+  }
+  .nav .nav-icons {
+    display: none;
+  }
+  .nav .nav-fix {
+    justify-content: center;
+  }
+}
