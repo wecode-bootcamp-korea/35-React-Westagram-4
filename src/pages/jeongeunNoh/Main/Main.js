@@ -9,7 +9,7 @@ function MainJeongEun() {
           <div className="leftMenu">
             <img
               className="instagram"
-              src="./images/instagram.png"
+              src="/images/jeongeunNoh/instagram.png"
               alt="instagram"
             />
             <span id="westagram">westagram</span>
@@ -29,14 +29,14 @@ function MainJeongEun() {
           <div className="rightMenu">
             <ul className="menu">
               <li>
-                <img src="./images/explore.png" alt="explore" />
+                <img src="/images/jeongeunNoh/explore.png" alt="explore" />
               </li>
               <li className="li2">
-                <img src="./images/heart.png" alt="heart" />
+                <img src="/images/jeongeunNoh/heart.png" alt="heart" />
                 <span>.</span>
               </li>
               <li>
-                <img src="./images/profile.png" alt="profile" />
+                <img src="/images/jeongeunNoh/profile.png" alt="profile" />
               </li>
             </ul>
           </div>
@@ -47,14 +47,14 @@ function MainJeongEun() {
         <div className="feeds">
           <article className="mainFeed">
             <div className="mainFeedBar">
-              <img src="./images/img1.jpeg" alt="circleimg" />
+              <img src="/images/jeongeunNoh/img1.jpeg" alt="circleimg" />
               <span>
                 <strong>jeongeuni___</strong>
               </span>
               <i className="fa-solid fa-ellipsis" />
             </div>
             <div className="mainFeedImg">
-              <img src="./images/img2.jpeg" alt="mainfeedimg" />
+              <img src="/images/jeongeunNoh/img2.jpeg" alt="mainfeedimg" />
             </div>
             <div className="mainFeedContents">
               <div className="contentsIcons">
@@ -69,7 +69,7 @@ function MainJeongEun() {
               </div>
               <div className="contentsComments">
                 <div className="like">
-                  <img src="./images/img3.jpeg" alt="" />
+                  <img src="/images/jeongeunNoh/img3.jpeg" alt="" />
                   <span className="likeComment">
                     <strong className="likers">duck</strong>님 외{' '}
                     <strong>1000명</strong>이 좋아합니다
@@ -98,7 +98,7 @@ function MainJeongEun() {
 
         <div className="mainRight">
           <div className="myInsta">
-            <img src="./images/myInsta.jpeg" alt="myInsta" />
+            <img src="/images/jeongeunNoh/myInsta.jpeg" alt="myInsta" />
             <div className="myId">
               <p>
                 <strong>jeongeuni__</strong>
@@ -117,7 +117,7 @@ function MainJeongEun() {
 
             <div className="storys">
               <div className="story">
-                <img src="./images/right1.jpeg" alt="myInsta" />
+                <img src="/images/jeongeunNoh/right1.jpeg" alt="myInsta" />
                 <div className="storyId">
                   <p>
                     <strong>jeongeuni__</strong>
@@ -126,7 +126,7 @@ function MainJeongEun() {
                 </div>
               </div>
               <div className="story">
-                <img src="./images/right2.jpeg" alt="myInsta" />
+                <img src="/images/jeongeunNoh/right2.jpeg" alt="myInsta" />
                 <div className="storyId">
                   <p>
                     <strong>jeongeuni__</strong>
@@ -135,7 +135,7 @@ function MainJeongEun() {
                 </div>
               </div>
               <div className="story">
-                <img src="./images/right3.jpeg" alt="myInsta" />
+                <img src="/images/jeongeunNoh/right3.jpeg" alt="myInsta" />
                 <div className="storyId">
                   <p>
                     <strong>jeongeuni__</strong>
@@ -144,7 +144,7 @@ function MainJeongEun() {
                 </div>
               </div>
               <div className="story">
-                <img src="./images/right4.jpeg" alt="myInsta" />
+                <img src="/images/jeongeunNoh/right4.jpeg" alt="myInsta" />
                 <div className="storyId">
                   <p>
                     <strong>jeongeuni__</strong>
@@ -164,7 +164,7 @@ function MainJeongEun() {
             </div>
 
             <div className="recommendPeopel">
-              <img src="./images/right5.jpeg" alt="myInsta" />
+              <img src="/images/jeongeunNoh/right5.jpeg" alt="myInsta" />
               <div className="recommendId">
                 <p>
                   <strong>jeongeuni__</strong>
@@ -175,7 +175,7 @@ function MainJeongEun() {
             </div>
 
             <div className="recommendPeopel">
-              <img src="./images/right6.jpeg" alt="myInsta" />
+              <img src="/images/jeongeunNoh/right6.jpeg" alt="myInsta" />
               <div className="recommendId">
                 <p>
                   <strong>jeongeuni__</strong>
@@ -186,7 +186,7 @@ function MainJeongEun() {
             </div>
 
             <div className="recommendPeopel">
-              <img src="./images/right7.jpeg" alt="myInsta" />
+              <img src="/images/jeongeunNoh/right7.jpeg" alt="myInsta" />
               <div className="recommendId">
                 <p>
                   <strong>jeongeuni__</strong>

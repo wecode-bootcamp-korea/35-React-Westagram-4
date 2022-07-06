@@ -7,12 +7,12 @@ function LoginJeongEun() {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate('/main');
+    navigate('/main-jeongeun');
   };
 
   return (
     <div className="Login">
-      <Link to="/main" style={{ textDecoration: 'none' }}>
+      <Link to="/main-jeongeun" style={{ textDecoration: 'none' }}>
         <h1 className="logo">westagram</h1>
       </Link>
       <input
