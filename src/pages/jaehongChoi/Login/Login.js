@@ -19,14 +19,14 @@ function LoginJaeHong() {
                   class="id"
                   type="text"
                   placeholder="전화번호, 사용자 이름 또는 이메일"
-                ></input>
+                />
               </div>
               <div class="passworddiv">
                 <input
                   class="password"
                   type="password"
                   placeholder="비밀번호"
-                ></input>
+                />
               </div>
               <button type="button" class="button">
                 로그인
