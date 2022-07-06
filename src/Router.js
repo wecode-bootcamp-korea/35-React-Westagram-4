@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from './components/Nav/Nav';
+// import Nav from './components/Nav/Nav';
 //익현 Login,Main
 import LoginIkHyun from './pages/ikhyunKim/Login/Login';
 import MainIkHyun from './pages/ikhyunKim/Main/Main';
@@ -20,7 +20,7 @@ import MainJaeHong from './pages/jaehongChoi/Main/Main';
 function Router() {
   return (
     <BrowserRouter>
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
         {/* 익현 */}
         <Route path="/login-ikhyun" element={<LoginIkHyun />} />
@@ -36,7 +36,7 @@ function Router() {
         <Route path="/main-geumgwan" element={<MainGeumGwan />} />
         {/* 제홍 */}
         <Route path="/login-jaehong" element={<LoginJaeHong />} />
-        <Route path="/login-jaehong" element={<MainJaeHong />} />
+        <Route path="/main-jaehong" element={<MainJaeHong />} />
       </Routes>
     </BrowserRouter>
   );

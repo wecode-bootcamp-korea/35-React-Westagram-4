@@ -23,7 +23,7 @@ function MainIkHyun() {
                 <div className="search-info-imgbox">
                   <img
                     className="search-icon"
-                    src="./images/search-img.png"
+                    src="/images/ikhyunKim/search-img.png"
                     alt=""
                   />
                 </div>
@@ -81,14 +81,14 @@ function MainIkHyun() {
             <div className="article-top">
               <div className="logo-and-name">
                 <div className="article-logobox">
-                  <img src="./images/1.JPG" alt="" />
+                  <img src="/images/ikhyunKim/1.JPG" alt="" />
                 </div>
                 <p>ik_hyun2</p>
               </div>
               <i id="article-more" className="fa-solid fa-ellipsis" />
             </div>
             <div className="article-main-imgbox">
-              <img src="./images/IMG_3572.JPG" alt="" />
+              <img src="/images/ikhyunKim/IMG_3572.JPG" alt="" />
             </div>
             <div className="article-icon-bar">
               <div className="article-icon">
@@ -101,7 +101,7 @@ function MainIkHyun() {
             <div className="article-comment">
               <div className="article-comment-like">
                 <div className="article-imgbox">
-                  <img src="./images/commet1.jpg" alt="" />
+                  <img src="/images/ikhyinKim/commet1.jpg" alt="" />
                 </div>
                 <p>
                   <strong>aineworld</strong>님 <strong>외 10명</strong>이
@@ -145,14 +145,14 @@ function MainIkHyun() {
             <div className="article-top">
               <div className="logo-and-name">
                 <div className="article-logobox">
-                  <img src="./images/1.JPG" alt="" />
+                  <img src="/images/ikhyunKim/1.JPG" alt="" />
                 </div>
                 <p>ik_hyun2</p>
               </div>
               <i id="article-more" className="fa-solid fa-ellipsis" />
             </div>
             <div className="article-main-imgbox">
-              <img src="./images/IMG_2923.JPG" alt="" />
+              <img src="/images/ikhyunKim/IMG_2923.JPG" alt="" />
             </div>
             <div className="article-icon-bar">
               <div className="article-icon">
@@ -165,7 +165,7 @@ function MainIkHyun() {
             <div className="article-comment">
               <div className="article-comment-like">
                 <div className="article-imgbox">
-                  <img src="./images/commet1.jpg" alt="" />
+                  <img src="/images/ikhyunKim/commet1.jpg" alt="" />
                 </div>
                 <p>
                   <strong>aineworld</strong>님 <strong>외 10명</strong>이
@@ -212,7 +212,7 @@ function MainIkHyun() {
         <div className="main-right">
           <div className="wecode-top">
             <div className="wecode-logo">
-              <img src="./images/3.png" alt="" />
+              <img src="/images/ikhyunKim/3.png" alt="" />
             </div>
             <div className="wecode-name">
               <p className="wecode-bootcamp">wecode bootcamp</p>
@@ -227,7 +227,7 @@ function MainIkHyun() {
               </div>
               <div className="storyimg-and-name">
                 <div className="storyimg-box">
-                  <img src="./images/storty1.jpg" alt="" />
+                  <img src="/images//ikhyunKim/storty1.jpg" alt="" />
                 </div>
                 <div className="story-name">
                   <p style={{ fontWeight: 'bold' }}>_yum_s</p>
@@ -236,7 +236,7 @@ function MainIkHyun() {
               </div>
               <div className="storyimg-and-name">
                 <div className="storyimg-box">
-                  <img src="./images/story2.jpg" alt="" />
+                  <img src="/images/ikhyunKim/story2.jpg" alt="" />
                 </div>
                 <div className="story-name">
                   <p style={{ fontWeight: 'bold' }}>drink_eat_drink</p>
@@ -245,7 +245,7 @@ function MainIkHyun() {
               </div>
               <div className="storyimg-and-name">
                 <div className="storyimg-box">
-                  <img src="./images/story3.jpg" alt="" />
+                  <img src="/images/ikhyunKim/story3.jpg" alt="" />
                 </div>
                 <div className="story-name">
                   <p style={{ fontWeight: 'bold' }}>hyukyc</p>
@@ -254,7 +254,7 @@ function MainIkHyun() {
               </div>
               <div className="storyimg-and-name">
                 <div className="storyimg-box">
-                  <img src="./images/story4.jpg" alt="" />
+                  <img src="/images/ikhyunKim/story4.jpg" alt="" />
                 </div>
                 <div className="story-name">
                   <p style={{ fontWeight: 'bold' }}>jminkeek</p>
@@ -263,7 +263,7 @@ function MainIkHyun() {
               </div>
               <div className="storyimg-and-name">
                 <div className="storyimg-box">
-                  <img src="./images/story5.jpg" alt="" />
+                  <img src="/images/ikhyunKim/story5.jpg" alt="" />
                 </div>
                 <div className="story-name">
                   <p className="story-blackname" style={{ fontWeight: 'bold' }}>
@@ -281,7 +281,7 @@ function MainIkHyun() {
             </div>
             <div className="recommendimg-and-name">
               <div className="recommend-imgbox">
-                <img src="./images/recommend1.jpg" alt="" />
+                <img src="/images/ikhyunKim/recommend1.jpg" alt="" />
               </div>
               <div className="recommend-name">
                 <p style={{ fontWeight: 'bold' }}>joaaaaaahye</p>
@@ -291,7 +291,7 @@ function MainIkHyun() {
             </div>
             <div className="recommendimg-and-name">
               <div className="recommend-imgbox">
-                <img src="./images/recommend2.jpg" alt="" />
+                <img src="/images/ikhyunKim/recommend2.jpg" alt="" />
               </div>
               <div className="recommend-name">
                 <p style={{ fontWeight: 'bold' }}>rampart81</p>
@@ -301,7 +301,7 @@ function MainIkHyun() {
             </div>
             <div className="recommendimg-and-name">
               <div className="recommend-imgbox">
-                <img src="./images/recommend3.jpg" alt="" />
+                <img src="/images/ikhyunKim/recommend3.jpg" alt="" />
               </div>
               <div className="recommend-name">
                 <p style={{ fontWeight: 'bold' }}>shawnjjoo</p>
