@@ -1,21 +1,21 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from '../src/components/Nav/Nav';
+import Nav from './components/Nav/Nav';
 //익현 Login,Main
-import LoginIkHyun from '../src/pages/ikhyunKim/Login/Login';
-import MainIkHyun from '../src/pages/ikhyunKim/Main/Main';
+import LoginIkHyun from './pages/ikhyunKim/Login/Login';
+import MainIkHyun from './pages/ikhyunKim/Main/Main';
 //정은 Login,Main
-import LoginJeongEun from '../src/pages/jeongeunNoh/Login/Login';
-import MainJeongEun from '../src/pages/jeongeunNoh/Main/Main';
+import LoginJeongEun from './pages/jeongeunNoh/Login/Login';
+import MainJeongEun from './pages/jeongeunNoh/Main/Main';
 //억화 Login,Main
-import LoginEokHwa from '../src/pages/eokhwaJeong/Login/Login';
-import MainEokHwa from '../src/pages/eokhwaJeong/Main/Main';
+import LoginEokHwa from './pages/eokhwaJeong/Login/Login';
+import MainEokHwa from './pages/eokhwaJeong/Main/Main';
 //금관 Login,Main
-import LoginGeumGwan from '../src/pages/geumgwanLee/Login/Login';
-import MainGeumGwan from '../src/pages/geumgwanLee/Main/Main';
+import LoginGeumGwan from './pages/geumgwanLee/Login/Login';
+import MainGeumGwan from './pages/geumgwanLee/Main/Main';
 //제홍 Login,Main
-import LoginJaeHong from '../src/pages/jaehongChoi/Login/Login';
-import MainJaeHong from '../src/pages/jaehongChoi/Main/Main';
+import LoginJaeHong from './pages/jaehongChoi/Login/Login';
+import MainJaeHong from './pages/jaehongChoi/Main/Main';
 
 function Router() {
   return (
