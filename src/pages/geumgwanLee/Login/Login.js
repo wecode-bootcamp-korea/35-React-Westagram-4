@@ -30,9 +30,7 @@ function LoginGeumGwan() {
           </button>
         </div>
       </main>
-      <footer>
-        <a href="">비밀번호를 잊으셨나요?</a>
-      </footer>
+      <footer>비밀번호를 잊으셨나요?</footer>
     </div>
   );
 }
