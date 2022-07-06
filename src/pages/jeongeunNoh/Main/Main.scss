@@ -1,0 +1,398 @@
+$border-style: 1px solid #e7e7e7;
+$white-color: #ffffff;
+$light-gray-color: #fafafa;
+$dark-gray-color: #8e8f8f;
+
+@mixin layout($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.weight {
+  color: $dark-gray-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -ms-overflow-style: none;
+  width: 100%;
+  background-color: $light-gray-color;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* nav */
+nav {
+  background-color: $white-color;
+  @include layout($align: null);
+  border-bottom: $border-style;
+
+  .navBar {
+    height: 60px;
+    width: 1200px;
+    @include layout($justify: space-around);
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .leftMenu {
+      display: flex;
+      align-items: center;
+
+      #westagram {
+        border-left: 1px solid;
+        margin: 0 18px;
+        padding-left: 10px;
+        font-family: 'Lobster', cursive;
+        font-size: 20px;
+        padding-bottom: 8px;
+      }
+    }
+
+    .centerMenu {
+      color: $dark-gray-color;
+
+      .centerMenuInput {
+        position: relative;
+        border: 1px solid $dark-gray-color;
+        border-radius: 3px;
+        width: 200px;
+        height: 28px;
+        text-align: center;
+        background-color: $light-gray-color;
+      }
+
+      .magnify {
+        position: relative;
+        right: 125px;
+        font-size: 10px;
+      }
+    }
+
+    .rightMenu {
+      .menu {
+        list-style: none;
+        display: flex;
+        padding: 0;
+
+        li {
+          margin: 0 10px;
+          width: 20px;
+          height: 20px;
+        }
+
+        .li2 span {
+          position: relative;
+          bottom: 14px;
+          left: 8.4px;
+          color: red;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* main */
+
+main {
+  @include layout($align: null);
+  margin-top: 60px;
+
+  .feeds {
+    width: 540px;
+    height: 100%;
+    margin-right: 20px;
+    background-color: $white-color;
+    border: $border-style;
+
+    .mainFeed {
+      position: relative;
+      height: 100%;
+
+      .mainFeedBar {
+        height: 60px;
+        @include layout($justify: null);
+        padding: 20px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: $border-style;
+        }
+
+        span {
+          padding-left: 20px;
+        }
+
+        i {
+          position: absolute;
+          font-size: 17px;
+          right: 20px;
+        }
+      }
+
+      .mainFeedImg {
+        height: 550px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .mainFeedContents {
+        height: 100%;
+
+        .contentsIcons {
+          height: 40px;
+          @include layout($justify: space-between);
+          padding: 3px 8px;
+
+          i {
+            font-size: 25px;
+            padding: 5px;
+            color: $dark-gray-color;
+          }
+
+          .contentsIconsLeft {
+            i:first-child {
+              color: red;
+            }
+          }
+        }
+
+        .contentsComments {
+          padding-bottom: 3p;
+          padding-left: 13px;
+          height: 100%;
+
+          .like {
+            @include layout($justify: null);
+            margin-bottom: 8px;
+
+            img {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              border: $border-style;
+            }
+
+            .likeComment {
+              @include layout($justify: null);
+
+              .likers {
+                padding-left: 5px;
+              }
+            }
+          }
+
+          .yourComment {
+            // display: flex;
+            // justify-content: space-between;
+            @include layout($align: null, $justify: space-between);
+            height: 20px;
+
+            .realComment {
+              padding: 0 5px;
+            }
+
+            .smallheart_delete {
+              display: flex;
+
+              .smallheart {
+                font-size: 13px;
+                padding: 5px 0;
+              }
+
+              .delete {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        .clockFlow {
+          .weight {
+            padding-left: 13px;
+          }
+        }
+      }
+    }
+
+    .mainFeedComment {
+      height: 60px;
+      @include layout($align: null, $justify: space-between);
+      border-top: $border-style;
+
+      .inputComment {
+        outline: none;
+        border: 0px;
+        padding: 8px;
+        color: $dark-gray-color;
+        font-size: 15px;
+      }
+
+      .inputSubmit {
+        border: 0px;
+        padding: 8px;
+        background-color: $white-color;
+        color: #bde2fd;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .mainRight {
+    width: 260px;
+    height: 560px;
+
+    .myInsta {
+      height: 60px;
+      @include layout($justify: null);
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .myId {
+        padding: 0 13px;
+
+        p {
+          line-height: 1.5px;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .storyBox {
+      height: 200px;
+      background-color: $white-color;
+      border: $border-style;
+
+      .storysVar {
+        padding: 8px 16px 0 16px;
+        @include layout($justify: space-between);
+
+        span {
+          font-size: 13px;
+        }
+      }
+
+      .storys {
+        position: relative;
+        overflow: auto;
+        height: 173px;
+        padding: 8px 16px 0 16px;
+        .story {
+          @include layout($justify: null);
+          height: 40px;
+          margin-bottom: 10px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid #f709e7;
+          }
+
+          .storyId {
+            padding: 0 13px;
+
+            p {
+              line-height: 1.5px;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    .freindRecommendBox {
+      height: 170px;
+      background-color: $white-color;
+      border: $border-style;
+      margin: 10px 0;
+
+      .recommendVar {
+        padding: 8px 16px 0 16px;
+        @include layout($justify: space-between);
+
+        span {
+          font-size: 13px;
+        }
+      }
+
+      .recommendPeopel {
+        @include layout($justify: null);
+        height: 35px;
+        margin: 10px 13px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          padding: 1.2px;
+          border-radius: 50%;
+        }
+
+        .recommendId {
+          padding: 0 13px;
+          width: 165px;
+
+          p {
+            line-height: 1.5px;
+            font-size: 13px;
+          }
+        }
+
+        .follow {
+          font-size: 13px;
+          font-weight: bold;
+          color: #009af4;
+          position: relative;
+        }
+      }
+    }
+
+    .footer {
+      height: 130px;
+      color: $dark-gray-color;
+      line-height: 1.5px;
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .centerMenu {
+    display: none;
+  }
+
+  .main {
+    margin: 0;
+  }
+
+  .mainRight {
+    display: none;
+  }
+
+  body {
+    max-width: 100%;
+  }
+
+  .feeds {
+    margin-right: 0;
+  }
+}
