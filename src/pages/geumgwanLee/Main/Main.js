@@ -8,14 +8,14 @@ function MainGeumGwan() {
       <nav>
         <div class="nav-space">
           <span class="leftSide">
-            <img src="/images/geumgwanLee/instagram.png" alt="로고" />
+            <img src="/images/geumgwanLee/instagram.png" alt="profile" />
             <span class="logoStyle">Westagram</span>
           </span>
           <input class="Search" type="text" id="search" placeholder="검색" />
           <span class="rightSide">
-            <img src="/images/geumgwanLee/explore.png" />
-            <img src="/images/geumgwanLee/heart.png" />
-            <img src="/images/geumgwanLee/profile.png" />
+            <img src="/images/geumgwanLee/explore.png" alt="profile" />
+            <img src="/images/geumgwanLee/heart.png" alt="profile" />
+            <img src="/images/geumgwanLee/profile.png" alt="profile" />
           </span>
         </div>
       </nav>
@@ -27,6 +27,7 @@ function MainGeumGwan() {
                 <img
                   class="article-profileImg"
                   src="/images/geumgwanLee/pro.png"
+                  alt="profile"
                 />
                 <span class="article-profileText">gc__eric</span>
                 <i class="fa-solid fa-ellipsis" />
@@ -35,6 +36,7 @@ function MainGeumGwan() {
                 <img
                   class="article-feedImg"
                   src="/images/geumgwanLee/ggo.png"
+                  alt="profile"
                 />
               </div>
               <div class="article-iconsFlex">
@@ -45,7 +47,7 @@ function MainGeumGwan() {
               </div>
               <div class="article-undercontainer">
                 <div class="article-like">
-                  <img src="/images/geumgwanLee/pro.png" />
+                  <img src="/images/geumgwanLee/pro.png" alt="profile" />
                   <span>
                     <span class="textbold">WeCode</span>님 외
                     <span class="textbold">705명</span>이 좋아합니다
@@ -83,6 +85,7 @@ function MainGeumGwan() {
                 <img
                   class="article-profileImg"
                   src="/images/geumgwanLee/pro.png"
+                  alt="profile"
                 />
                 <span class="article-profileText">gc__eric</span>
                 <i class="fa-solid fa-ellipsis" />
@@ -91,6 +94,7 @@ function MainGeumGwan() {
                 <img
                   class="article-feedImg"
                   src="/images/geumgwanLee/sam.png"
+                  alt="profile"
                 />
               </div>
               <div class="article-iconsFlex">
@@ -101,7 +105,7 @@ function MainGeumGwan() {
               </div>
               <div class="article-undercontainer">
                 <div class="article-like">
-                  <img src="/images/geumgwanLee/pro.png" />
+                  <img src="/images/geumgwanLee/pro.png" alt="profile" />
                   <span>
                     <span class="textbold">WeCode</span>님 외
                     <span class="textbold">705명</span>이 좋아합니다
@@ -156,49 +160,49 @@ function MainGeumGwan() {
               </div>
               <div class="storiesall">
                 <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="" />
+                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
                   <div class="storyInside">
                     <div class="textbold">wecode_bootcamp</div>
                     <div class="textlight">3분전</div>
                   </div>
                 </div>
                 <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="" />
+                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
                   <div class="storyInside">
                     <div class="textbold">wecode_bootcamp</div>
                     <div class="textlight">10분전</div>
                   </div>
                 </div>
                 <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="" />
+                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
                   <div class="storyInside">
                     <div class="textbold">wecode_bootcamp</div>
                     <div class="textlight">20분전</div>
                   </div>
                 </div>
                 <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="" />
+                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
                   <div class="storyInside">
                     <div class="textbold">wecode_bootcamp</div>
                     <div class="textlight">30분전</div>
                   </div>
                 </div>
                 <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="" />
+                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
                   <div class="storyInside">
                     <div class="textbold">wecode_bootcamp</div>
                     <div class="textlight">50분전</div>
                   </div>
                 </div>
                 <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="" />
+                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
                   <div class="storyInside">
                     <div class="textbold">wecode_bootcamp</div>
                     <div class="textlight">1시간전</div>
                   </div>
                 </div>
                 <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="" />
+                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
                   <div class="storyInside">
                     <div class="textbold">wecode_bootcamp</div>
                     <div class="textlight">2시간전</div>
@@ -213,7 +217,7 @@ function MainGeumGwan() {
                 <div class="textbold">모두 보기</div>
               </div>
               <div class="reco-boxline">
-                <img src="/images/geumgwanLee/bts.png" alt="bts" />
+                <img src="/images/geumgwanLee/bts.png" alt="profile" />
                 <div class="reco-boxIdMutual">
                   <div class="textbold">BTS_Official</div>
                   <div class="textlight">gold_en님 외 2명이 팔로우합니다</div>
@@ -221,7 +225,7 @@ function MainGeumGwan() {
                 <div class="followbutton">팔로우</div>
               </div>
               <div class="reco-boxline">
-                <img src="/images/geumgwanLee/bts.png" alt="bts" />
+                <img src="/images/geumgwanLee/bts.png" alt="profile" />
                 <div class="reco-boxIdMutual">
                   <div class="textbold">BTS_Official</div>
                   <div class="textlight">gold_en님 외 2명이 팔로우합니다</div>
@@ -229,7 +233,7 @@ function MainGeumGwan() {
                 <div class="followbutton">팔로우</div>
               </div>
               <div class="reco-boxline">
-                <img src="/images/geumgwanLee/bts.png" alt="bts" />
+                <img src="/images/geumgwanLee/bts.png" alt="profile" />
                 <div class="reco-boxIdMutual">
                   <div class="textbold">BTS_Official</div>
                   <div class="textlight">gold_en님 외 2명이 팔로우합니다</div>
