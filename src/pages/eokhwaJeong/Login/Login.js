@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.scss';
+import { Link } from 'react-router-dom';
 
 function LoginEokHwa() {
   return (
@@ -22,7 +23,9 @@ function LoginEokHwa() {
         />
 
         <div>
-          <button className="on">로그인</button>
+          <Link to="/main-eokhwa">
+            <button className="on">로그인</button>
+          </Link>
         </div>
       </div>
       <a href="#!" className="last_txt">
