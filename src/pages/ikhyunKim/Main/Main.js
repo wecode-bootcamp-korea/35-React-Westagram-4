@@ -81,7 +81,7 @@ function MainIkHyun() {
             <div className="article-top">
               <div className="logo-and-name">
                 <div className="article-logobox">
-                  <img src="./images/1.JPG" />
+                  <img src="./images/1.JPG" alt="" />
                 </div>
                 <p>ik_hyun2</p>
               </div>
@@ -145,7 +145,7 @@ function MainIkHyun() {
             <div className="article-top">
               <div className="logo-and-name">
                 <div className="article-logobox">
-                  <img src="./images/1.JPG" />
+                  <img src="./images/1.JPG" alt="" />
                 </div>
                 <p>ik_hyun2</p>
               </div>
