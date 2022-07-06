@@ -17,14 +17,17 @@ function MainJaeHong() {
           </div>
           <div class="navIcon">
             <img
+              alt=""
               class="navExplore"
               src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
             />
             <img
+              alt=""
               class="navHeart"
               src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
             />
             <img
+              alt=""
               class="navPerson"
               src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
             />
@@ -37,6 +40,7 @@ function MainJaeHong() {
             <div class="articleTop">
               <div class="articleTopLeft">
                 <img
+                  alt=""
                   class="thumbnailUploader"
                   src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
                 />
@@ -45,18 +49,20 @@ function MainJaeHong() {
                   <span>wecode-위코드</span>
                 </div>
               </div>
-              <img src="/images/jaehongChoi/dots.png" class="dots" />
+              <img alt="" src="/images/jaehongChoi/dots.png" class="dots" />
             </div>
             <div class="articleMid">
               <img
+                alt=""
                 src="/images/jaehongChoi/westagramview.jpg"
                 class="mainPicture"
               />
             </div>
             <div class="articleBottom1">
               <div class="articleBottomIconLeft">
-                <img src="/images/jaehongChoi/heart.png" class="like" />
+                <img alt="" src="/images/jaehongChoi/heart.png" class="like" />
                 <img
+                  alt=""
                   src="/images/jaehongChoi/speech-bubble.png"
                   class="speechBubble"
                 />
@@ -66,7 +72,11 @@ function MainJaeHong() {
             </div>
             <div class="articleBottom2">
               <div class="likePeople">
-                <img src="/images/jaehongChoi/flower.jpg" class="flower" />
+                <img
+                  alt=""
+                  src="/images/jaehongChoi/flower.jpg"
+                  class="flower"
+                />
                 <strong>wecodewecode</strong>
                 <span>님</span>
                 <strong>&nbsp; 외 10명</strong>
@@ -101,6 +111,7 @@ function MainJaeHong() {
         <div class="main-right">
           <div class="id-right">
             <img
+              alt=""
               class="thumbnailUploaderRight"
               src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
             />
@@ -116,7 +127,11 @@ function MainJaeHong() {
             </div>
             <div class="story-1">
               <div>
-                <img src="/images/jaehongChoi/flower.jpg" class="storyflower" />
+                <img
+                  alt=""
+                  src="/images/jaehongChoi/flower.jpg"
+                  class="storyflower"
+                />
               </div>
               <div class="story-1word">
                 <strong>35thwewe</strong>
@@ -125,7 +140,11 @@ function MainJaeHong() {
             </div>
             <div class="story-1">
               <div>
-                <img src="/images/jaehongChoi/flower.jpg" class="storyflower" />
+                <img
+                  alt=""
+                  src="/images/jaehongChoi/flower.jpg"
+                  class="storyflower"
+                />
               </div>
               <div class="story-1word">
                 <strong>35thwewe</strong>
@@ -134,7 +153,11 @@ function MainJaeHong() {
             </div>
             <div class="story-1">
               <div>
-                <img src="/images/jaehongChoi/flower.jpg" class="storyflower" />
+                <img
+                  alt=""
+                  src="/images/jaehongChoi/flower.jpg"
+                  class="storyflower"
+                />
               </div>
               <div class="story-1word">
                 <strong>35thwewe</strong>
@@ -143,7 +166,11 @@ function MainJaeHong() {
             </div>
             <div class="story-1">
               <div>
-                <img src="/images/jaehongChoi/flower.jpg" class="storyflower" />
+                <img
+                  alt=""
+                  src="/images/jaehongChoi/flower.jpg"
+                  class="storyflower"
+                />
               </div>
               <div class="story-1word">
                 <strong>35thwewe</strong>
@@ -158,7 +185,11 @@ function MainJaeHong() {
             </div>
             <div class="recom1">
               <div>
-                <img src="/images/jaehongChoi/flower.jpg" class="recomflower" />
+                <img
+                  alt=""
+                  src="/images/jaehongChoi/flower.jpg"
+                  class="recomflower"
+                />
               </div>
               <div class="recom1word">
                 <strong>35thwewe</strong>
@@ -168,7 +199,11 @@ function MainJaeHong() {
             </div>
             <div class="recom1">
               <div>
-                <img src="/images/jaehongChoi/flower.jpg" class="recomflower" />
+                <img
+                  alt=""
+                  src="/images/jaehongChoi/flower.jpg"
+                  class="recomflower"
+                />
               </div>
               <div class="recom1word">
                 <strong>35thwewe</strong>
@@ -178,7 +213,11 @@ function MainJaeHong() {
             </div>
             <div class="recom1">
               <div>
-                <img src="/images/jaehongChoi/flower.jpg" class="recomflower" />
+                <img
+                  alt=""
+                  src="/images/jaehongChoi/flower.jpg"
+                  class="recomflower"
+                />
               </div>
               <div class="recom1word">
                 <strong>35thwewe</strong>
