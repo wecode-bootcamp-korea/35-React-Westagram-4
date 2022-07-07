@@ -5,8 +5,11 @@
   width: 695px;
   height: 750px;
   border: 2px solid rgb(230, 230, 230);
-  margin: 150px auto;
-  position: relative;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 5px;
 
   .logo {
@@ -68,5 +71,33 @@
     color: #003668;
     font-weight: 500;
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .login-eokhwa {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    padding-bottom: 140px;
+  }
+  .login-eokhwa .logo {
+    margin-top: 40px;
+  }
+  .login-eokhwa .logo p {
+    font-size: 15vw;
+  }
+  .login-eokhwa .input_box {
+    width: 90%;
+    max-width: 650px;
+  }
+  .login-eokhwa .last_txt p {
+    font-size: 17px;
+  }
+  .login-eokhwa .input_box input {
+    height: 65px;
+  }
+  .login-eokhwa .input_box {
+    margin-top: 50px;
   }
 }

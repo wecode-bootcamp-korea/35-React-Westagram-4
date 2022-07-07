@@ -4,33 +4,6 @@ import './Main.scss';
 function MainEokHwa() {
   return (
     <div className="main-eokhwa">
-      <nav>
-        <div className="nav_container">
-          <div className="logo_box">
-            <i className="fa-brands fa-instagram" />
-            <span>Westargram</span>
-          </div>
-          <div className="search">
-            <input type="text" placeholder="검색" className="search_input" />
-            <i className="fa-solid fa-magnifying-glass" />
-            <div className="search_target" />
-          </div>
-          <div className="my_info">
-            <i className="fa-solid fa-compass" />
-            <i className="fa-solid fa-heart" />
-            <i className="fa-solid fa-user" onclick="clickOn()" />
-            <div className="arrow">
-              <div className="bubble">
-                <p>프로필</p>
-                <p>저장됨</p>
-                <p>설정됨</p>
-                <p>계정 전환</p>
-                <p>로그아웃</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
       <main>
         <div className="main_container">
           <div className="feeds">
