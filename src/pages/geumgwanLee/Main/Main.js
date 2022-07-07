@@ -5,20 +5,6 @@ function MainGeumGwan() {
   let [like, like1] = useState(<i class="fa-regular fa-heart" />);
   return (
     <div className="body">
-      <nav>
-        <div class="nav-space">
-          <span class="leftSide">
-            <img src="/images/geumgwanLee/instagram.png" alt="profile" />
-            <span class="logoStyle">Westagram</span>
-          </span>
-          <input class="Search" type="text" id="search" placeholder="검색" />
-          <span class="rightSide">
-            <img src="/images/geumgwanLee/explore.png" alt="profile" />
-            <img src="/images/geumgwanLee/heart.png" alt="profile" />
-            <img src="/images/geumgwanLee/profile.png" alt="profile" />
-          </span>
-        </div>
-      </nav>
       <div class="main">
         <section>
           <div class="feeds">

@@ -1,7 +1,13 @@
 import React from 'react';
 import './Login.scss';
+import { useNavigate } from 'react-router-dom';
 
 function LoginGeumGwan() {
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    navigate('/main-geumgwan');
+  };
   return (
     <div class="container">
       <header>
@@ -25,7 +31,7 @@ function LoginGeumGwan() {
           />
         </div>
         <div className="buttonarea">
-          <button type="submit" id="submit">
+          <button className="loginBtn" onClick={goToMain}>
             로그인
           </button>
         </div>
