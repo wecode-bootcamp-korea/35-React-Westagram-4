@@ -30,7 +30,7 @@ function MainIkHyun() {
             <div className="article-comment">
               <div className="article-comment-like">
                 <div className="article-imgbox">
-                  <img src="/images/ikhyinKim/commet1.jpg" alt="" />
+                  <img src="/images/ikhyunKim/commet1.jpg" alt="" />
                 </div>
                 <p>
                   <strong>aineworld</strong>님 <strong>외 10명</strong>이
