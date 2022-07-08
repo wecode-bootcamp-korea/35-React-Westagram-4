@@ -7,7 +7,6 @@ function MainGeumGwan() {
   const onChange = event => {
     setComment(event.target.value);
   };
-  const [userName] = useState('eric_Lee');
   const [feedComments, setFeedComments] = useState([]);
   const post = e => {
     e.preventDefault();
@@ -84,7 +83,6 @@ function MainGeumGwan() {
                 <button disabled={!commentInput} onClick={post}>
                   게시
                 </button>
-                {console.log(post)}
               </form>
             </article>
             <article class="article1">
