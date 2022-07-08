@@ -3,6 +3,20 @@ import './Main.scss';
 
 function MainGeumGwan() {
   let [like, like1] = useState(<i class="fa-regular fa-heart" />);
+  const [commentInput, setComment] = useState('');
+  const onChange = event => {
+    setComment(event.target.value);
+  };
+  const [userName] = useState('eric_Lee');
+  const [feedComments, setFeedComments] = useState([]);
+  const post = e => {
+    e.preventDefault();
+    const copyFeedComments = [...feedComments];
+    copyFeedComments.push(commentInput);
+    setFeedComments(copyFeedComments);
+    setComment('');
+  };
+
   return (
     <div className="body">
       <div class="main">
@@ -60,10 +74,17 @@ function MainGeumGwan() {
                 <div class="article-time">55분 전</div>
               </div>
               <form class="comment-write">
-                <input id="comment" type="text" placeholder="댓글 달기..." />
-                <button type="submit" id="submit">
+                <input
+                  name="commentInput"
+                  type="text"
+                  value={commentInput}
+                  placeholder="댓글 달기..."
+                  onChange={onChange}
+                />
+                <button disabled={!commentInput} onClick={post}>
                   게시
                 </button>
+                {console.log(post)}
               </form>
             </article>
             <article class="article1">
