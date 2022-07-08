@@ -9,9 +9,9 @@ function MainIkHyun() {
   const updateComment = ({ target }) => {
     setCommentValue(target.value);
   };
-
+  const commentValueCheck = commentValue.length > 0;
   const pushComment = e => {
-    if (commentValue.length > 0 && (e.key === 'Enter' || e.type === 'click')) {
+    if (commentValueCheck && (e.key === 'Enter' || e.type === 'click')) {
       setCommentList([...commentList, commentValue]);
       setCommentValue('');
     }
@@ -91,6 +91,7 @@ function MainIkHyun() {
                 className="submit"
                 type="submit"
                 value="게시"
+                style={commentValueCheck ? { opacity: 1 } : { opacity: '' }}
                 onClick={pushComment}
               />
             </div>
@@ -165,6 +166,7 @@ function MainIkHyun() {
                 className="submit"
                 type="submit"
                 value="게시"
+                style={commentValueCheck ? { opacity: 1 } : { opacity: '' }}
                 onClick={pushComment}
               />
             </div>
