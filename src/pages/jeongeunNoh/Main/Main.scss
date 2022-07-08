@@ -188,33 +188,46 @@ main {
             }
           }
 
-          .yourComment {
-            // display: flex;
-            // justify-content: space-between;
-            @include layout($align: null, $justify: space-between);
-            height: 20px;
+          .myComment {
+            padding-bottom: 4px;
+          }
+        }
+
+        .yourComment {
+          // background-color: #f709e7;
+          // display: flex;
+          // justify-content: space-between;
+          @include layout($align: null, $justify: space-between);
+          height: 20px;
+          padding: 2px 13px;
+
+          .comment {
+            // background-color: #009AF4;
 
             .realComment {
               padding: 0 5px;
             }
+          }
 
-            .smallheart_delete {
-              display: flex;
+          .smallheart_delete {
+            display: flex;
 
-              .smallheart {
-                font-size: 13px;
-                padding: 5px 0;
-              }
+            .smallheart {
+              font-size: 13px;
+              padding: 5px 0;
+            }
 
-              .delete {
-                font-size: 13px;
-              }
+            .delete {
+              font-size: 13px;
+              padding: 5px 0;
+              padding-left: 2px;
             }
           }
         }
 
         .clockFlow {
           .weight {
+            padding-top: 4px;
             padding-left: 13px;
           }
         }

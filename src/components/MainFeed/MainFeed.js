@@ -52,12 +52,12 @@ function MainFeed(props) {
   );
 }
 
-function YourComment() {
+function YourComment(props) {
   return (
     <div className="yourComment">
       <span className="comment">
         <strong>yourID</strong>
-        <span className="realComment">댓글을 달고 있습니다.</span>
+        <span className="realComment">{props.data}</span>
       </span>
       <span className="smallheart_delete">
         <i className="smallheart fa-regular fa-heart" />
