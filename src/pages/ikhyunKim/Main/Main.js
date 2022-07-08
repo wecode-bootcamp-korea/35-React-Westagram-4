@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
+import Comment from '../../../components/Comment/Comment';
 
 function MainIkHyun() {
+  const [commentValue, setCommentValue] = useState('');
+  const [commentList, setCommentList] = useState([]);
+
+  const updateComment = ({ target }) => {
+    setCommentValue(target.value);
+  };
+
+  const pushComment = e => {
+    if (commentValue.length > 0 && (e.key === 'Enter' || e.type === 'click')) {
+      setCommentList([...commentList, commentValue]);
+      setCommentValue('');
+    }
+  };
+
   return (
     <div className="main">
       <main>
@@ -56,7 +71,9 @@ function MainIkHyun() {
                   <p className="user-commnet">거봐 좋았잖아~~~~~🙆🏻‍♀️</p>
                 </div>
               </div>
-              <div className="create-comment-div" />
+              <div className="create-comment-div">
+                <Comment commentList={commentList} />
+              </div>
               <span className="comment-time" style={{ color: 'gray' }}>
                 42분 전
               </span>
@@ -66,8 +83,16 @@ function MainIkHyun() {
                 className="comment"
                 type="text"
                 placeholder="댓글 달기..."
+                onChange={updateComment}
+                onKeyUp={pushComment}
+                value={commentValue}
               />
-              <input className="submit" type="submit" value="게시" />
+              <input
+                className="submit"
+                type="submit"
+                value="게시"
+                onClick={pushComment}
+              />
             </div>
           </article>
           <article className="article">
@@ -121,8 +146,7 @@ function MainIkHyun() {
                 </div>
               </div>
               <div className="create-comment-div">
-                <div className="new-comment" />
-                <div className="delete-heart" />
+                <Comment commentList={commentList} />
               </div>
               <span className="comment-time" style={{ color: 'gray' }}>
                 42분 전
@@ -133,8 +157,16 @@ function MainIkHyun() {
                 className="comment"
                 type="text"
                 placeholder="댓글 달기..."
+                onChange={updateComment}
+                onKeyUp={pushComment}
+                value={commentValue}
               />
-              <input className="submit" type="submit" value="게시" />
+              <input
+                className="submit"
+                type="submit"
+                value="게시"
+                onClick={pushComment}
+              />
             </div>
           </article>
         </div>
