@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 
 function MainFeed(props) {
@@ -39,7 +40,7 @@ function MainFeed(props) {
           </div>
         </div>
 
-        {props.comment.map(({ data, i }) => {
+        {props.comment.map((data, i) => {
           return <YourComment key={i} data={data} index={i} />;
         })}
 

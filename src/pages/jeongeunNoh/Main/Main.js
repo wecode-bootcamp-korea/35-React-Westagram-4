@@ -23,7 +23,6 @@ function MainJeongEun() {
   // };
 
   const addComment = e => {
-    console.log('서브밋중');
     e.preventDefault();
     const copyComment = [...comment]; //[인풋값들이 담겨있음]
     copyComment.push(value); //value = e.target.value
@@ -43,8 +42,6 @@ function MainJeongEun() {
         <MainFeed comment={comment} />
 
         <form className="mainFeedComment" onSubmit={addComment}>
-          {/* onSubMit={addComment} */}
-
           <input
             className="inputComment"
             type="text"
@@ -53,7 +50,6 @@ function MainJeongEun() {
             onChange={getInputValue}
             // onKeyPress={addComment}
           />
-
           <input type="submit" className="inputSubmit" value="게시" />
         </form>
       </div>
