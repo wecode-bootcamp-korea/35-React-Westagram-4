@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Nav.scss';
 function Nav() {
+  const [makeUserWindow, setMakeUserWindow] = useState('none');
+  const [makeSearchWindow, setMakeSearchWindow] = useState('none');
+
+  const updateUserWindow = () => {
+    makeUserWindow === 'none'
+      ? setMakeUserWindow('flex')
+      : setMakeUserWindow('none');
+  };
+
+  const updateSearchWindow = () => {
+    makeSearchWindow === 'none'
+      ? setMakeSearchWindow('flex')
+      : setMakeSearchWindow('none');
+  };
+
   return (
     <div className="nav">
       <div className="nav-fix">
@@ -14,9 +29,9 @@ function Nav() {
             <span>|</span>Westagram
           </p>
         </div>
-        <div className="nav-search">
+        <div className="nav-search" onClick={updateSearchWindow}>
           <input className="search-bar" type="text" placeholder="🔍 검색" />
-          <div className="search-info">
+          <div className="search-info" style={{ display: makeSearchWindow }}>
             <div className="info-box">
               <div className="search-info-imgbox">
                 <img
@@ -48,11 +63,12 @@ function Nav() {
           </div>
           <div className="nav-icon_underdot">
             <img
+              onClick={updateUserWindow}
               className="user-icon"
               src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
               alt=""
             />
-            <div className="user-info">
+            <div className="user-info" style={{ display: makeUserWindow }}>
               <p className="info-profile">
                 <i className="fa-regular fa-circle-user" />
                 <span>프로필</span>
