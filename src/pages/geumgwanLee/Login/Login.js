@@ -40,7 +40,7 @@ function LoginGeumGwan() {
           </div>
           <div>
             <input
-              type="pw"
+              type="password"
               name="pw"
               value={person.pw}
               placeholder="비밀번호"

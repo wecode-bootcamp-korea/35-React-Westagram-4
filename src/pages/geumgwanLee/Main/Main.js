@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import './Main.scss';
 
 function MainGeumGwan() {
-  let [like, like1] = useState(<i class="fa-regular fa-heart" />);
+  // 첫번째 게시물 댓글달기
   const [commentInput, setComment] = useState('');
   const onChange = event => {
     setComment(event.target.value);
   };
+  const [userName] = useState('IamGroot');
   const [feedComments, setFeedComments] = useState([]);
   const post = e => {
     e.preventDefault();
@@ -14,6 +15,25 @@ function MainGeumGwan() {
     copyFeedComments.push(commentInput);
     setFeedComments(copyFeedComments);
     setComment('');
+  };
+
+  const CommentList = props => {
+    const [like, likeRed] = useState('♡');
+
+    return (
+      <div className="useCommentBox">
+        <p className="userName">{props.userName}</p>
+        <div className="userComment">{props.userComment}</div>
+        <p
+          className="userHeart"
+          onClick={() => {
+            likeRed('❤️');
+          }}
+        >
+          {like}
+        </p>
+      </div>
+    );
   };
 
   return (
@@ -59,17 +79,20 @@ function MainGeumGwan() {
                   <div class="comment">
                     <span class="textbold">Wecode_bootcamp</span>
                     화이팅~~
-                    <span
-                      class="rightheart"
-                      onClick={() => {
-                        like1('❤️');
-                      }}
-                    >
-                      {like}
-                    </span>
+                    <span class="rightheart">♡</span>
                   </div>
                 </div>
-                <div id="comments" />
+                <div id="comments">
+                  {feedComments.map((commentArr, i) => {
+                    return (
+                      <CommentList
+                        userName={userName}
+                        userComment={commentArr}
+                        key={i}
+                      />
+                    );
+                  })}
+                </div>
                 <div class="article-time">55분 전</div>
               </div>
               <form class="comment-write">
@@ -123,28 +146,19 @@ function MainGeumGwan() {
                   <div class="comment">
                     <span class="textbold">Wecode_bootcamp</span>
                     화이팅~~
-                    <span
-                      class="rightheart"
-                      onClick={() => {
-                        like1('❤️');
-                      }}
-                    >
-                      {like}
-                    </span>
+                    <span class="rightheart">♡</span>
                   </div>
                 </div>
                 <div class="article-time">55분 전</div>
               </div>
+
               <form class="comment-write">
-                <input id="comment" type="text" placeholder="댓글 달기..." />
-                <button
-                  type="submit"
-                  id="submit"
-                  onclick="location.href='' "
-                  disabled="disabled"
-                >
-                  게시
-                </button>
+                <input
+                  name="commentInput"
+                  type="text"
+                  placeholder="댓글 달기..."
+                />
+                <button>게시</button>
               </form>
             </article>
           </div>
@@ -253,4 +267,5 @@ function MainGeumGwan() {
     </div>
   );
 }
+
 export default MainGeumGwan;
