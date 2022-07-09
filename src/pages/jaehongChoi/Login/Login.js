@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Login.scss';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function LoginJaeHong() {
   return (
@@ -23,14 +24,31 @@ function LoginJaeHong() {
 const LoginElement = () => {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
+  const [isActive, setIsActive] = useState(false);
 
   const handleIdInput = event => {
     setId(event.target.value);
+    console.log('id :', id);
+    if (event.target.value.includes('@') && password.length > 4) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
   };
 
   const handlePwInput = event => {
+    console.log('pw :', password);
     setPassword(event.target.value);
+    if (id.includes('@') && event.target.value.length > 4) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
   };
+
+  const navigate = useNavigate();
+  const goToMain = () => navigate('/main-jaehong');
+
   return (
     <div className="inputBlank">
       {/* ID */}
@@ -48,7 +66,12 @@ const LoginElement = () => {
         placeholder="비밀번호"
       />
       {/* LOGIN BUTTON */}
-      <button type="button" className="unactivatedBtn" disabled>
+      <button
+        type="button"
+        className={isActive ? 'activatedBtn' : 'unactivatedBtn'}
+        disabled={!isActive}
+        onClick={goToMain}
+      >
         로그인
       </button>
     </div>
