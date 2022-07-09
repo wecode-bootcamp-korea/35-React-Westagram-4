@@ -29,8 +29,13 @@ function Nav() {
             <span>|</span>Westagram
           </p>
         </div>
-        <div className="nav-search" onClick={updateSearchWindow}>
-          <input className="search-bar" type="text" placeholder="🔍 검색" />
+        <div className="nav-search">
+          <input
+            className="search-bar"
+            onClick={updateSearchWindow}
+            type="text"
+            placeholder="🔍 검색"
+          />
           <div className="search-info" style={{ display: makeSearchWindow }}>
             <div className="info-box">
               <div className="search-info-imgbox">

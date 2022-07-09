@@ -105,7 +105,7 @@ main {
 
     .comment-id-comment {
       display: flex;
-      margin: 0 10px;
+      margin: 5px 10px;
 
       .user-id1 {
         margin-right: 5px;
@@ -118,10 +118,6 @@ main {
       .user-comment {
         margin-right: 5px;
       }
-    }
-
-    .comment-time {
-      margin-left: 10px;
     }
   }
 
@@ -289,7 +285,7 @@ main {
 .create-comment {
   display: flex;
   justify-content: space-between;
-  margin: 0 10px;
+  margin: 5px 10px;
 
   .new-comment {
     .user-id {

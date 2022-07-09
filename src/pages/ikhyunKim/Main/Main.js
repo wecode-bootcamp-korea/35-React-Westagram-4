@@ -1,22 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Main.scss';
 import Comment from '../../../components/Comment/Comment';
 
 function MainIkHyun() {
-  const [commentValue, setCommentValue] = useState('');
-  const [commentList, setCommentList] = useState([]);
-
-  const updateComment = ({ target }) => {
-    setCommentValue(target.value);
-  };
-  const commentValueCheck = commentValue.length > 0;
-  const pushComment = e => {
-    if (commentValueCheck && (e.key === 'Enter' || e.type === 'click')) {
-      setCommentList([...commentList, commentValue]);
-      setCommentValue('');
-    }
-  };
-
   return (
     <div className="main">
       <main>
@@ -42,59 +28,7 @@ function MainIkHyun() {
               </div>
               <i className="fa-regular fa-bookmark" />
             </div>
-            <div className="article-comment">
-              <div className="article-comment-like">
-                <div className="article-imgbox">
-                  <img src="/images/ikhyunKim/commet1.jpg" alt="" />
-                </div>
-                <p>
-                  <strong>aineworld</strong>님 <strong>외 10명</strong>이
-                  좋아합니다
-                </p>
-              </div>
-              <div className="comment-id-comment">
-                <p style={{ fontWeight: 'bold' }} className="user-id1">
-                  canon_mj
-                </p>
-                <p className="user-commnet">
-                  위워크에서 진행한 베이킹 클래스...
-                </p>
-                <p className="more-info" style={{ color: 'gray' }}>
-                  더 보기
-                </p>
-              </div>
-              <div className="include-heart">
-                <div className="comment-id-comment">
-                  <p style={{ fontWeight: 'bold' }} className="user-id2">
-                    neceosecius
-                  </p>
-                  <p className="user-commnet">거봐 좋았잖아~~~~~🙆🏻‍♀️</p>
-                </div>
-              </div>
-              <div className="create-comment-div">
-                <Comment commentList={commentList} />
-              </div>
-              <span className="comment-time" style={{ color: 'gray' }}>
-                42분 전
-              </span>
-            </div>
-            <div className="comment-submit">
-              <input
-                className="comment"
-                type="text"
-                placeholder="댓글 달기..."
-                onChange={updateComment}
-                onKeyUp={pushComment}
-                value={commentValue}
-              />
-              <input
-                className="submit"
-                type="submit"
-                value="게시"
-                style={commentValueCheck ? { opacity: 1 } : { opacity: '' }}
-                onClick={pushComment}
-              />
-            </div>
+            <Comment />
           </article>
           <article className="article">
             <div className="article-top">
@@ -117,59 +51,7 @@ function MainIkHyun() {
               </div>
               <i className="fa-regular fa-bookmark" />
             </div>
-            <div className="article-comment">
-              <div className="article-comment-like">
-                <div className="article-imgbox">
-                  <img src="/images/ikhyunKim/commet1.jpg" alt="" />
-                </div>
-                <p>
-                  <strong>aineworld</strong>님 <strong>외 10명</strong>이
-                  좋아합니다
-                </p>
-              </div>
-              <div className="comment-id-comment">
-                <p style={{ fontWeight: 'bold' }} className="user-id1">
-                  canon_mj
-                </p>
-                <p className="user-commnet">
-                  위워크에서 진행한 베이킹 클래스...
-                </p>
-                <p className="more-info" style={{ color: 'gray' }}>
-                  더 보기
-                </p>
-              </div>
-              <div className="include-heart">
-                <div className="comment-id-comment">
-                  <p style={{ fontWeight: 'bold' }} className="user-id2">
-                    neceosecius
-                  </p>
-                  <p className="user-commnet">거봐 좋았잖아~~~~~🙆🏻‍♀️</p>
-                </div>
-              </div>
-              <div className="create-comment-div">
-                <Comment commentList={commentList} />
-              </div>
-              <span className="comment-time" style={{ color: 'gray' }}>
-                42분 전
-              </span>
-            </div>
-            <div className="comment-submit">
-              <input
-                className="comment"
-                type="text"
-                placeholder="댓글 달기..."
-                onChange={updateComment}
-                onKeyUp={pushComment}
-                value={commentValue}
-              />
-              <input
-                className="submit"
-                type="submit"
-                value="게시"
-                style={commentValueCheck ? { opacity: 1 } : { opacity: '' }}
-                onClick={pushComment}
-              />
-            </div>
+            <Comment />
           </article>
         </div>
         <div className="main-right">
