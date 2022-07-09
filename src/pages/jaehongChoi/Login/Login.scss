@@ -3,16 +3,8 @@
   box-sizing: border-box;
 
   .wholePage {
-    height: 100%;
     height: 750px;
     max-width: 700px;
-
-    p {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      color: #325a85;
-    }
 
     .loginBox {
       height: 95%;
@@ -42,44 +34,57 @@
           text-decoration: none;
         }
       }
-      .loginElement {
+
+      .inputBlank {
         display: flex;
         flex-direction: column;
-        margin: 0 auto;
+        align-items: center;
 
-        .inputBlank {
-          display: flex;
-          flex-direction: column;
-
-          .id,
-          .password {
-            position: relative;
-            padding-left: 3%;
-            font-size: 20px;
-          }
-
-          .id {
-            height: 75px;
-            width: 530px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-          }
-
-          .password {
-            height: 75px;
-            width: 530px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-          }
+        .id,
+        .password {
+          position: relative;
+          padding-left: 3%;
+          font-size: 20px;
         }
-        .button {
-          background-color: #c4e1f7;
-          color: white;
-          border: none;
-          height: 60px;
+
+        .id {
+          height: 75px;
           width: 530px;
-          border-radius: 10px;
+          margin-bottom: 15px;
+          border-radius: 5px;
         }
+
+        .password {
+          height: 75px;
+          width: 530px;
+          margin-bottom: 30px;
+          border-radius: 5px;
+        }
+      }
+      .unActivatedBtn {
+        background-color: #c4e1f7;
+        color: white;
+        border: none;
+        height: 60px;
+        width: 530px;
+        border-radius: 10px;
+      }
+
+      .activatedBtn {
+        background-color: #0095f6;
+        color: white;
+        border: none;
+        height: 60px;
+        width: 530px;
+        border-radius: 10px;
+      }
+
+      p {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        color: #325a85;
+        align-self: center;
       }
     }
   }
