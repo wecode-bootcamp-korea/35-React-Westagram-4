@@ -17,8 +17,18 @@ function LoginIkHyun() {
   };
 
   const goToMain = id.includes('@') && password.length >= 5;
-
   const navigation = useNavigate();
+  const login = () => {
+    navigation('/main-ikhyun');
+  };
+
+  const checkEnter = e => {
+    if (e.key === 'Enter') {
+      if (goToMain) {
+        login();
+      }
+    }
+  };
   return (
     <div className="login-box">
       <div className="login">
@@ -28,16 +38,18 @@ function LoginIkHyun() {
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={idValue}
+          onKeyUp={checkEnter}
         />
         <input
           className="login-password"
           type="password"
           placeholder="비밀번호"
           onChange={pwdValue}
+          onKeyUp={checkEnter}
         />
         {/* <Link to="/main"> */}
         <button
-          onClick={() => navigation('/main-ikhyun')}
+          onClick={login}
           className="login-button"
           disabled={!goToMain}
           style={goToMain ? { opacity: '1' } : { opacity: '' }}
