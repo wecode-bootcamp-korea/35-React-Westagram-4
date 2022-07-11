@@ -10,13 +10,12 @@ function MainJeongEun() {
     setValue(e.target.value);
   };
 
+  // onKeyPress로 했을 때
   // const addComment = e => {
   //   if (e.key === 'Enter') {
-  //     const copyComment = [...comment]; //[인풋값들이 담겨있음]
-  //     copyComment.push(value); //value = e.target.value
-  //     // console.log(copyComment) //copyComment = [value, value, value]
+  //     const copyComment = [...comment];
+  //     copyComment.push(value);
   //     setComment(copyComment);
-  //     // console.log(comment); // comment = [추가, 추가, 추가]
   //     setValue('');
   //     e.preventDefault();
   //   }
@@ -25,21 +24,27 @@ function MainJeongEun() {
   const addComment = e => {
     e.preventDefault();
     const copyComment = [...comment]; //[인풋값들이 담겨있음]
-    copyComment.push(value); //value = e.target.value
-    // console.log(copyComment) //copyComment = [value, value, value]
-    setComment(copyComment);
-    // console.log(comment); // comment = [추가, 추가, 추가]
-    setValue('');
+    if (value.length < 1) {
+      alert('댓글을 입력해주세요');
+    } else {
+      copyComment.push(value); //value = e.target.value를 []에 넣어주는 중
+      // console.log('copyComment : ', copyComment); //copyComment = [value, value, value]
+      setComment(copyComment); //copyComment로 comment 계속 업데이트 해주기.
+      // console.log('comment : ', comment); // comment = [value, value, value]
+      setValue('');
+    }
   };
 
   return (
     <main>
       <div className="feeds">
+        {/* 이렇게하면 MainFeed가 댓글 수 만큼 생성됨 */}
         {/* {comment.map((data, i) => {
-          return <MainFeed key={i} data={data} index={i} />
+          return <MainFeed key={i} data={data} />
         })} */}
 
-        <MainFeed comment={comment} />
+        {/* comment = [value, value, value] */}
+        <MainFeed comment={comment} setComment={setComment} />
 
         <form className="mainFeedComment" onSubmit={addComment}>
           <input

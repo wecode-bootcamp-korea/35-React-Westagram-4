@@ -2,7 +2,6 @@
 import React from 'react';
 
 function MainFeed(props) {
-  // console.log(props.comment)
   return (
     <article className="mainFeed">
       <div className="mainFeedBar">
@@ -30,8 +29,8 @@ function MainFeed(props) {
           <div className="like">
             <img src="/images/jeongeunNoh/img3.jpeg" alt="" />
             <span className="likeComment">
-              <strong className="likers">duck</strong>님 외{' '}
-              <strong>1000명</strong>이 좋아합니다
+              <strong className="likers">duck</strong>님 외
+              <strong>&nbsp;1000명</strong>이 좋아합니다
             </span>
           </div>
           <div className="myComment">
@@ -39,11 +38,24 @@ function MainFeed(props) {
             접선...<span className="weight">&nbsp;더 보기</span>
           </div>
         </div>
-
         {props.comment.map((data, i) => {
-          return <YourComment key={i} data={data} index={i} />;
+          return (
+            <YourComment
+              key={i}
+              data={data}
+              deleteComment={() => {
+                let copyComment = [...props.comment];
+                copyComment.splice(i, 1);
+                props.setComment(copyComment);
+              }}
+              // changeRedHeart={() => {
+              //   let copyComment = [...props.comment];
+              //   copyComment.classList.replace('fa-regular', 'fa-solid');
+              //   props.setComment(copyComment);
+              // }}
+            />
+          );
         })}
-
         <div className="clockFlow">
           <span className="weight">1시간 전</span>
         </div>
@@ -60,8 +72,17 @@ function YourComment(props) {
         <span className="realComment">{props.data}</span>
       </span>
       <span className="smallheart_delete">
-        <i className="smallheart fa-regular fa-heart" />
-        <i className="delete fa-solid fa-eraser" />
+        <i
+          onClick={e => {
+            e.target.classList.replace('fa-regular', 'fa-solid');
+            console.log(e.target);
+          }}
+          className="smallheart fa-regular fa-heart"
+        />
+        <i
+          onClick={props.deleteComment}
+          className="delete fa-solid fa-eraser"
+        />
       </span>
     </div>
   );

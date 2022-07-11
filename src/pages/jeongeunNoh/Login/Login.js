@@ -46,7 +46,7 @@ function LoginJeongEun() {
         style={
           isTrue ? { backgroundColor: 'blue' } : { backgroundColor: '#BEE2FD' }
         }
-        disabled={!isTrue}
+        disabled={!isTrue} //true일 때 재역할을 함, isTrue가 true면 disabled는 false가 되어 main에 들어갈 수 있음.
       >
         로그인
       </button>

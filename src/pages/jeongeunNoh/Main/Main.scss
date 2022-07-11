@@ -194,16 +194,11 @@ main {
         }
 
         .yourComment {
-          // background-color: #f709e7;
-          // display: flex;
-          // justify-content: space-between;
           @include layout($align: null, $justify: space-between);
           height: 20px;
           padding: 2px 13px;
 
           .comment {
-            // background-color: #009AF4;
-
             .realComment {
               padding: 0 5px;
             }
@@ -215,6 +210,10 @@ main {
             .smallheart {
               font-size: 13px;
               padding: 5px 0;
+            }
+
+            .smallheart.fa-solid.fa-heart {
+              color: red;
             }
 
             .delete {
@@ -243,6 +242,7 @@ main {
         outline: none;
         border: 0px;
         padding: 8px;
+        width: 100%;
         color: $dark-gray-color;
         font-size: 15px;
       }
