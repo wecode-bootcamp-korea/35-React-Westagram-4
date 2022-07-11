@@ -28,7 +28,6 @@ const LoginElement = () => {
 
   const handleIdInput = event => {
     setId(event.target.value);
-    console.log('id :', id);
     if (event.target.value.includes('@') && password.length > 4) {
       setIsActive(true);
     } else {
@@ -37,7 +36,6 @@ const LoginElement = () => {
   };
 
   const handlePwInput = event => {
-    console.log('pw :', password);
     setPassword(event.target.value);
     if (id.includes('@') && event.target.value.length > 4) {
       setIsActive(true);

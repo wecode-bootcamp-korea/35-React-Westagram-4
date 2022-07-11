@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.scss';
+import { useState } from 'react';
 
 function MainJaeHong() {
   return (
@@ -91,19 +92,7 @@ function MainJaeHong() {
                   <strong class="commentUser">weCoder</strong>
                   <span class="commentMsg">진짜 멋있었쪙?</span>
                 </div>
-                <div class="commentPlus" />
-                <div class="typeComment">
-                  <input
-                    class="replyContent"
-                    type="text"
-                    placeholder="댓글 달기..."
-                  />
-                  <span>
-                    <button class="replyBtn" type="submit">
-                      게시
-                    </button>
-                  </span>
-                </div>
+                <ReplyFunction />
               </div>
             </div>
           </article>
@@ -238,4 +227,74 @@ function MainJaeHong() {
     </div>
   );
 }
+
+const ReplyFunction = () => {
+  const [comment, setComment] = useState('');
+  const [isActive, setIsActive] = useState(false);
+
+  const handleCommentInput = event => {
+    setComment(event.target.value);
+    if (!!event.target.value) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
+  };
+
+  const NewComment = ({ comment }) => {
+    return (
+      <div className="replyUserDiv">
+        <div className="userComment">
+          <strong>allong_sio</strong>
+          <p>{comment}</p>
+        </div>
+        <div className="likeDelete">
+          <img className="likeBtn" src="images/jaehongChoi/heart.png" alt="" />
+        </div>
+      </div>
+    );
+  };
+
+  const [commentArray, setCommentArray] = useState([]);
+
+  const onSubmit = event => {
+    event.preventDefault();
+    if (comment === '') {
+      return;
+    }
+    // setCommentArray.push(newComment());
+    setCommentArray([...commentArray, comment]);
+    setComment('');
+  };
+
+  return (
+    <>
+      <div class="commentPlus">
+        {commentArray.map((commentItem, index) => (
+          <NewComment comment={commentItem} key={index} />
+        ))}
+      </div>
+      <div class="typeComment">
+        <input
+          class="replyContent"
+          type="text"
+          placeholder="댓글 달기..."
+          onChange={handleCommentInput}
+          value={comment}
+        />
+        <span>
+          <button
+            class={isActive ? 'activatedBtn' : 'unactivatedBtn'}
+            type="submit"
+            onClick={onSubmit}
+            disabled={!isActive}
+          >
+            게시
+          </button>
+        </span>
+      </div>
+    </>
+  );
+};
+
 export default MainJaeHong;
