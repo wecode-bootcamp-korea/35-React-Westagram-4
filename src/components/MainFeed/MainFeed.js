@@ -75,7 +75,6 @@ function YourComment(props) {
         <i
           onClick={e => {
             e.target.classList.replace('fa-regular', 'fa-solid');
-            console.log(e.target);
           }}
           className="smallheart fa-regular fa-heart"
         />
