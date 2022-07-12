@@ -1,7 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
 
 function MainEokHwa() {
+  let [commet, setComment] = useState('');
+  let [feedCommnet, setFeedCommnet] = useState([]);
+  let [count, setCount] = useState(0);
+  const copy = [...feedCommnet];
+  const getComment = () => {
+    copy.push(commet);
+    setComment('');
+    setFeedCommnet(copy);
+    setCount((count = count + 1));
+  };
+  console.log('댓글수', count);
+  const AddComment = () => {
+    console.log(copy);
+    return (
+      <>
+        {copy.map((els, idx) => {
+          return (
+            <p class="comments" key={idx}>
+              <strong>Wecode</strong>
+              {els}
+              <span
+                class="del_button"
+                style={{ cursor: 'pointer', padding: '20px' }}
+              >
+                삭제
+              </span>
+              <span
+                class="material-symbols-outlined comment_like "
+                style={{ float: 'right', fontSize: '20px' }}
+              >
+                favorite
+              </span>
+            </p>
+          );
+        })}
+      </>
+    );
+  };
+
   return (
     <div className="main-eokhwa">
       <main>
@@ -63,7 +102,8 @@ function MainEokHwa() {
                   </p>
                 </div>
                 <div className="reple_box">
-                  <div className="count_comment" />
+                  <div className="count_comment">댓 글수 {count}</div>
+                  <AddComment />
                 </div>
 
                 <div className="comment_box">
@@ -71,8 +111,12 @@ function MainEokHwa() {
                     id="reple_input"
                     type="text"
                     placeholder="댓글 달기.."
+                    onChange={e => {
+                      setComment(e.target.value);
+                    }}
+                    value={commet.length === 0 ? '' : commet}
                   />
-                  <span className="write_reple" onclick="addComment()">
+                  <span className="write_reple" onClick={getComment}>
                     게시
                   </span>
                 </div>

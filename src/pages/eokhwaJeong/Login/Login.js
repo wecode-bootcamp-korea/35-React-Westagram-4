@@ -21,26 +21,13 @@ const ButtonActive = () => {
 function LoginEokHwa() {
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
-  const [display, setDisplay] = useState('flex');
   const isValid = id.includes('@') && pw.length > 5;
   const navigate = useNavigate();
 
   const goToMain = () => {
     navigate('/main-eokhwa');
   };
-  // const nowUrl = window.location.href;
-  // const checkUrl = nowUrl.includes('login');
 
-  // const switchNav = e => {
-  //   if (e) {
-  //     setDisplay('none');
-  //   } else {
-  //     setDisplay('flex');
-  //   }
-  // };
-
-  // console.log(display);
-  // console.log(checkUrl);
   return (
     <div className="login-eokhwa">
       <div className="logo">
