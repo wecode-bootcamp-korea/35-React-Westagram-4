@@ -15,6 +15,14 @@ export default function Comment() {
     }
   };
 
+  const changeHeartColor = ({ target }) =>
+    target.style.color === ''
+      ? ((target.style.color = 'red'), (target.className = 'fa-solid fa-heart'))
+      : ((target.style.color = ''), (target.className = 'fa-regular fa-heart'));
+
+  const deleteComment = ({ target }) => {
+    target.parentElement.parentElement.remove();
+  };
   return (
     <>
       <div className="article-comment">
@@ -50,8 +58,11 @@ export default function Comment() {
                   <span className="user-comment">{a}</span>
                 </div>
                 <div className="delete-heart">
-                  <i className="fa-regular fa-heart" />
-                  <i className="fa-solid fa-trash" />
+                  <i
+                    className="fa-regular fa-heart"
+                    onClick={changeHeartColor}
+                  />
+                  <i className="fa-solid fa-trash" onClick={deleteComment} />
                 </div>
               </div>
             );
