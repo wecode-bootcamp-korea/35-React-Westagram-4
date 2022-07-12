@@ -12,9 +12,8 @@ function MainEokHwa() {
     setFeedCommnet(copy);
     setCount((count = count + 1));
   };
-  console.log('댓글수', count);
+
   const AddComment = () => {
-    console.log(copy);
     return (
       <>
         {copy.map((els, idx) => {

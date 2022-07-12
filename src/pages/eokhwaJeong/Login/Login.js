@@ -2,22 +2,6 @@ import React, { useState } from 'react';
 import './Login.scss';
 import { useNavigate } from 'react-router-dom';
 
-const Button = () => {
-  return (
-    <button className="" disabled>
-      로그인
-    </button>
-  );
-};
-
-const ButtonActive = () => {
-  return (
-    <button className="on" disabled="false">
-      로그인
-    </button>
-  );
-};
-
 function LoginEokHwa() {
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
