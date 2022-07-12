@@ -41,6 +41,10 @@
     background-color: #0095f6;
     color: white;
   }
+  button:disabled {
+    color: rgba(65, 171, 248, 0.5);
+    background-color: white;
+  }
 
   footer {
     position: absolute;

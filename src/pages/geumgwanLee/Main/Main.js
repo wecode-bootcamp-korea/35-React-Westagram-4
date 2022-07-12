@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import CommentList from './CommentList.js';
+import Story from './Story';
+import { RECO_LIST } from './recoData';
 import './Main.scss';
-import CommentList from './CommentList.jsx';
 
 function MainGeumGwan() {
   // 첫번째 게시물 댓글달기
   const [commentInput, setComment] = useState('');
   const onChange = event => {
-    setComment(event.target.value);
+    const { value } = event.target;
+    setComment(value);
   };
   const [userName] = useState('IamGroot');
   const [feedComments, setFeedComments] = useState([]);
@@ -18,50 +21,65 @@ function MainGeumGwan() {
     setComment('');
   };
 
+  function Reco() {
+    return RECO_LIST.map(info => {
+      return (
+        <div key={info.id} className="reco-boxline">
+          <img src="/images/geumgwanLee/bts.png" alt="profile" />
+          <div className="reco-boxIdMutual">
+            <div className="textbold">BTS_Official</div>
+            <div className="textlight">gold_en님 외 2명이 팔로우합니다</div>
+          </div>
+          <div className="followbutton">팔로우</div>
+        </div>
+      );
+    });
+  }
+
   return (
-    <div className="body">
-      <div class="main">
+    <div classNameName="body">
+      <div className="main">
         <section>
-          <div class="feeds">
-            <article class="article1">
-              <div class="article-nav">
+          <div className="feeds">
+            <article className="article1">
+              <div className="article-nav">
                 <img
-                  class="article-profileImg"
+                  className="article-profileImg"
                   src="/images/geumgwanLee/pro.png"
                   alt="profile"
                 />
-                <span class="article-profileText">gc__eric</span>
-                <i class="fa-solid fa-ellipsis" />
+                <span className="article-profileText">gc__eric</span>
+                <i className="fa-solid fa-ellipsis" />
               </div>
-              <div class="article-feedover">
+              <div className="article-feedover">
                 <img
-                  class="article-feedImg"
+                  className="article-feedImg"
                   src="/images/geumgwanLee/ggo.png"
                   alt="profile"
                 />
               </div>
-              <div class="article-iconsFlex">
-                <i class="fa-solid fa-heart" />
-                <i class="fa-regular fa-comment" />
-                <i class="fa-regular fa-paper-plane" />
-                <i class="fa-regular fa-bookmark" />
+              <div className="article-iconsFlex">
+                <i className="fa-solid fa-heart" />
+                <i className="fa-regular fa-comment" />
+                <i className="fa-regular fa-paper-plane" />
+                <i className="fa-regular fa-bookmark" />
               </div>
-              <div class="article-undercontainer">
-                <div class="article-like">
+              <div className="article-undercontainer">
+                <div className="article-like">
                   <img src="/images/geumgwanLee/pro.png" alt="profile" />
                   <span>
-                    <span class="textbold">WeCode</span>님 외
-                    <span class="textbold">705명</span>이 좋아합니다
+                    <span className="textbold">WeCode</span>님 외
+                    <span className="textbold">705명</span>이 좋아합니다
                   </span>
                 </div>
-                <div class="article-discription">
-                  <span class="textbold">gc__eric</span>
+                <div className="article-discription">
+                  <span className="textbold">gc__eric</span>
                   위코드 35기 화이팅~~~...
-                  <span class="textlight">더보기</span>
-                  <div class="comment">
-                    <span class="textbold">Wecode_bootcamp</span>
+                  <span className="textlight">더보기</span>
+                  <div className="comment">
+                    <span className="textbold">Wecode_bootcamp</span>
                     화이팅~~
-                    <span class="rightheart">♡</span>
+                    <span className="rightheart">♡</span>
                   </div>
                 </div>
                 <div id="comments">
@@ -75,9 +93,9 @@ function MainGeumGwan() {
                     );
                   })}
                 </div>
-                <div class="article-time">55분 전</div>
+                <div className="article-time">55분 전</div>
               </div>
-              <form class="comment-write">
+              <form className="comment-write">
                 <input
                   name="commentInput"
                   type="text"
@@ -90,158 +108,34 @@ function MainGeumGwan() {
                 </button>
               </form>
             </article>
-            <article class="article1">
-              <div class="article-nav">
-                <img
-                  class="article-profileImg"
-                  src="/images/geumgwanLee/pro.png"
-                  alt="profile"
-                />
-                <span class="article-profileText">gc__eric</span>
-                <i class="fa-solid fa-ellipsis" />
-              </div>
-              <div>
-                <img
-                  class="article-feedImg"
-                  src="/images/geumgwanLee/sam.png"
-                  alt="profile"
-                />
-              </div>
-              <div class="article-iconsFlex">
-                <i class="fa-solid fa-heart" />
-                <i class="fa-regular fa-comment" />
-                <i class="fa-regular fa-paper-plane" />
-                <i class="fa-regular fa-bookmark" />
-              </div>
-              <div class="article-undercontainer">
-                <div class="article-like">
-                  <img src="/images/geumgwanLee/pro.png" alt="profile" />
-                  <span>
-                    <span class="textbold">WeCode</span>님 외
-                    <span class="textbold">705명</span>이 좋아합니다
-                  </span>
-                </div>
-                <div class="article-discription">
-                  <span class="textbold">gc__eric</span>
-                  위코드 35기 화이팅~~~...
-                  <span class="textlight">더보기</span>
-                  <div class="comment">
-                    <span class="textbold">Wecode_bootcamp</span>
-                    화이팅~~
-                    <span class="rightheart">♡</span>
-                  </div>
-                </div>
-                <div class="article-time">55분 전</div>
-              </div>
-
-              <form class="comment-write">
-                <input
-                  name="commentInput"
-                  type="text"
-                  placeholder="댓글 달기..."
-                />
-                <button>게시</button>
-              </form>
-            </article>
           </div>
         </section>
         <section>
-          <div class="main-right">
-            <div class="right-nav">
+          <div className="main-right">
+            <div className="right-nav">
               <img src="/images/geumgwanLee/me.png" alt="profile" />
-              <div class="right-navtext">
-                <div class="textbold">gc__eric</div>
-                <div class="textlight">WeCodeㅣ위코드</div>
+              <div className="right-navtext">
+                <div className="textbold">gc__eric</div>
+                <div className="textlight">WeCodeㅣ위코드</div>
               </div>
             </div>
-            <div class="right-storybox">
-              <div class="right-storyboxnav">
-                <div class="textlight">스토리</div>
-                <div class="textbold">모두 보기</div>
+            <div className="right-storybox">
+              <div className="right-storyboxnav">
+                <div className="textlight">스토리</div>
+                <div className="textbold">모두 보기</div>
               </div>
-              <div class="storiesall">
-                <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
-                  <div class="storyInside">
-                    <div class="textbold">wecode_bootcamp</div>
-                    <div class="textlight">3분전</div>
-                  </div>
-                </div>
-                <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
-                  <div class="storyInside">
-                    <div class="textbold">wecode_bootcamp</div>
-                    <div class="textlight">10분전</div>
-                  </div>
-                </div>
-                <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
-                  <div class="storyInside">
-                    <div class="textbold">wecode_bootcamp</div>
-                    <div class="textlight">20분전</div>
-                  </div>
-                </div>
-                <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
-                  <div class="storyInside">
-                    <div class="textbold">wecode_bootcamp</div>
-                    <div class="textlight">30분전</div>
-                  </div>
-                </div>
-                <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
-                  <div class="storyInside">
-                    <div class="textbold">wecode_bootcamp</div>
-                    <div class="textlight">50분전</div>
-                  </div>
-                </div>
-                <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
-                  <div class="storyInside">
-                    <div class="textbold">wecode_bootcamp</div>
-                    <div class="textlight">1시간전</div>
-                  </div>
-                </div>
-                <div class="story">
-                  <img src="/images/geumgwanLee/wecode.png" alt="profile" />
-                  <div class="storyInside">
-                    <div class="textbold">wecode_bootcamp</div>
-                    <div class="textlight">2시간전</div>
-                  </div>
-                </div>
+              <div className="storiesall">
+                <Story />
               </div>
             </div>
 
-            <div class="recommendation-box">
-              <div class="right-storyboxnav">
-                <div class="textlight">회원님을 위한 추천</div>
-                <div class="textbold">모두 보기</div>
+            <div className="recommendation-box">
+              <div className="right-storyboxnav">
+                <div className="textlight">회원님을 위한 추천</div>
+                <div className="textbold">모두 보기</div>
               </div>
-              <div class="reco-boxline">
-                <img src="/images/geumgwanLee/bts.png" alt="profile" />
-                <div class="reco-boxIdMutual">
-                  <div class="textbold">BTS_Official</div>
-                  <div class="textlight">gold_en님 외 2명이 팔로우합니다</div>
-                </div>
-                <div class="followbutton">팔로우</div>
-              </div>
-              <div class="reco-boxline">
-                <img src="/images/geumgwanLee/bts.png" alt="profile" />
-                <div class="reco-boxIdMutual">
-                  <div class="textbold">BTS_Official</div>
-                  <div class="textlight">gold_en님 외 2명이 팔로우합니다</div>
-                </div>
-                <div class="followbutton">팔로우</div>
-              </div>
-              <div class="reco-boxline">
-                <img src="/images/geumgwanLee/bts.png" alt="profile" />
-                <div class="reco-boxIdMutual">
-                  <div class="textbold">BTS_Official</div>
-                  <div class="textlight">gold_en님 외 2명이 팔로우합니다</div>
-                </div>
-                <div class="followbutton">팔로우</div>
-              </div>
-              <div class="footer" />
+              <Reco />
+              <div className="footer" />
             </div>
           </div>
         </section>

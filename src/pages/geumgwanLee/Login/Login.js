@@ -1,7 +1,7 @@
 import React from 'react';
-import './Login.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import './Login.scss';
 
 function LoginGeumGwan() {
   const navigate = useNavigate();
@@ -22,8 +22,9 @@ function LoginGeumGwan() {
       pw: '',
     });
 
-    const handleIdInput = e => {
-      setPerson({ ...person, [e.target.name]: e.target.value });
+    const handleIdInput = event => {
+      const { value } = event.target;
+      setPerson({ ...person, [event.target.name]: value });
     };
 
     return (
