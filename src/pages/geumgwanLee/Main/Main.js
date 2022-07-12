@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Main.scss';
+import CommentList from './CommentList.jsx';
 
 function MainGeumGwan() {
   // 첫번째 게시물 댓글달기
@@ -15,25 +16,6 @@ function MainGeumGwan() {
     copyFeedComments.push(commentInput);
     setFeedComments(copyFeedComments);
     setComment('');
-  };
-
-  const CommentList = props => {
-    const [like, likeRed] = useState('♡');
-
-    return (
-      <div className="useCommentBox">
-        <p className="userName">{props.userName}</p>
-        <div className="userComment">{props.userComment}</div>
-        <p
-          className="userHeart"
-          onClick={() => {
-            likeRed('❤️');
-          }}
-        >
-          {like}
-        </p>
-      </div>
-    );
   };
 
   return (
