@@ -5,8 +5,10 @@ function MainEokHwa() {
   let [commet, setComment] = useState('');
   let [feedCommnet, setFeedCommnet] = useState([]);
   let [count, setCount] = useState(0);
-  const copy = [...feedCommnet];
+  const isValid = count < 1;
+
   const getComment = () => {
+    const copy = [...feedCommnet];
     copy.push(commet);
     setComment('');
     setFeedCommnet(copy);
@@ -16,7 +18,7 @@ function MainEokHwa() {
   const AddComment = () => {
     return (
       <>
-        {copy.map((els, idx) => {
+        {feedCommnet.map((els, idx) => {
           return (
             <p class="comments" key={idx}>
               <strong>Wecode</strong>
@@ -101,7 +103,12 @@ function MainEokHwa() {
                   </p>
                 </div>
                 <div className="reple_box">
-                  <div className="count_comment">댓 글수 {count}</div>
+                  <div
+                    className="count_comment"
+                    style={{ display: isValid ? 'none' : 'block' }}
+                  >
+                    댓 글수 {count}
+                  </div>
                   <AddComment />
                 </div>
 
