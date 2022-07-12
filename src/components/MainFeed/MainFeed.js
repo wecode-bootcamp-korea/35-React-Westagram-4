@@ -1,7 +1,26 @@
 /* eslint-disable react/destructuring-assignment */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function MainFeed(props) {
+  const [inputData, setInputData] = useState([]);
+  const [feedData, setFeedData] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/inputData.json')
+      .then(res => res.json())
+      .then(data => {
+        setInputData(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch('/data/feedData.json')
+      .then(res => res.json())
+      .then(data => {
+        setFeedData(data);
+      });
+  }, []);
+
   return (
     <article className="mainFeed">
       <div className="mainFeedBar">
@@ -38,7 +57,27 @@ function MainFeed(props) {
             접선...<span className="weight">&nbsp;더 보기</span>
           </div>
         </div>
-        {props.comment.map((data, i) => {
+
+        <div className="yourComment">
+          <span className="comment">
+            <strong>yourID</strong>
+            <span className="realComment">{props.data}</span>
+          </span>
+          <span className="smallheart_delete">
+            <i
+              onClick={e => {
+                e.target.classList.replace('fa-regular', 'fa-solid');
+              }}
+              className="smallheart fa-regular fa-heart"
+            />
+            <i
+              onClick={props.deleteComment}
+              className="delete fa-solid fa-eraser"
+            />
+          </span>
+        </div>
+
+        {/* {props.comment.map((data, i) => {
           return (
             <YourComment
               key={i}
@@ -48,14 +87,9 @@ function MainFeed(props) {
                 copyComment.splice(i, 1);
                 props.setComment(copyComment);
               }}
-              // changeRedHeart={() => {
-              //   let copyComment = [...props.comment];
-              //   copyComment.classList.replace('fa-regular', 'fa-solid');
-              //   props.setComment(copyComment);
-              // }}
             />
           );
-        })}
+        })} */}
         <div className="clockFlow">
           <span className="weight">1시간 전</span>
         </div>
@@ -64,27 +98,27 @@ function MainFeed(props) {
   );
 }
 
-function YourComment(props) {
-  return (
-    <div className="yourComment">
-      <span className="comment">
-        <strong>yourID</strong>
-        <span className="realComment">{props.data}</span>
-      </span>
-      <span className="smallheart_delete">
-        <i
-          onClick={e => {
-            e.target.classList.replace('fa-regular', 'fa-solid');
-          }}
-          className="smallheart fa-regular fa-heart"
-        />
-        <i
-          onClick={props.deleteComment}
-          className="delete fa-solid fa-eraser"
-        />
-      </span>
-    </div>
-  );
-}
+// function YourComment(props) {
+//   return (
+//     <div className="yourComment">
+//       <span className="comment">
+//         <strong>yourID</strong>
+//         <span className="realComment">{props.data}</span>
+//       </span>
+//       <span className="smallheart_delete">
+//         <i
+//           onClick={e => {
+//             e.target.classList.replace('fa-regular', 'fa-solid');
+//           }}
+//           className="smallheart fa-regular fa-heart"
+//         />
+//         <i
+//           onClick={props.deleteComment}
+//           className="delete fa-solid fa-eraser"
+//         />
+//       </span>
+//     </div>
+//   );
+// }
 
 export default MainFeed;
