@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable no-console */
+import React, { useState, useEffect } from 'react';
 import './Login.scss';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -6,6 +7,22 @@ function LoginJeongEun() {
   const navigate = useNavigate();
 
   const goToMain = () => {
+    // fetch('https://westagram-signup.herokuapp.com/login', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     // name: 'wjddms4107',
+    //     email: id,
+    //     password: pw,
+    //     // phone_number: '0107704444',
+    //   }),
+    // })
+    //   .then(res => res.json())
+    //   .then(result => {
+    //     if (result.ACCESS_TOKEN) {
+    //       localStorage.setItem('ACCESS_TOKEN', result.ACCESS_TOKEN);
+    //       console.log(localStorage.getItem('ACCESS_TOKEN'));
+    //     }
+    //   });
     navigate('/main-jeongeun');
   };
 

@@ -1,69 +1,62 @@
-* {
-  box-sizing: border-box;
-}
+@import '../../../styles/variables.scss';
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
+  background-color: $white-color;
   // height: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include layout;
 }
 
 .Login {
+  background-color: $white-color;
   position: relative;
+  margin: auto;
+  border: $border-style;
   width: 600px;
   height: 700px;
-  background-color: #ffffff;
-  display: flex;
+  @include layout($justify: null);
   flex-direction: column;
-  align-items: center;
-  margin: auto;
-  border: 2px solid #e5e6e6;
 
   a {
     color: black;
   }
 
   .logo {
-    text-align: center;
     font-family: 'Lobster', cursive;
-    font-size: 70px;
     margin-top: 60px;
     margin-bottom: 60px;
+    font-size: 70px;
+    text-align: center;
   }
 
   input.id,
   input.password {
-    border: 1px solid #e5e6e6;
+    background-color: $light-gray-color;
+    margin: 5px;
+    padding: 10px;
+    border: $border-style;
     border-radius: 7px;
-    background-color: #fafafa;
     width: 75%;
     height: 9.5%;
-    margin: 5px;
     font-size: 20px;
-    padding: 10px;
   }
 
   button {
-    border: 1px solid #bee2fd;
     background-color: #bee2fd;
+    color: $white-color;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid #bee2fd;
     border-radius: 7px;
+    margin: 20px;
     width: 75%;
     height: 8%;
-    margin: 20px;
-    color: #feffff;
-    font-size: 20px;
-    font-weight: bold;
   }
 
   .notice {
     position: absolute;
-    bottom: 40px;
-    text-align: center;
     color: #00376b;
     font-size: 20px;
+    text-align: center;
+    bottom: 40px;
   }
 }

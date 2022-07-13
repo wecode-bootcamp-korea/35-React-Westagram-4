@@ -11,14 +11,14 @@ function Feeds(props) {
 
   const addComment = e => {
     e.preventDefault();
-    const copyComment = [...comment]; //[인풋값들이 담겨있음]
+    const copyComment = [...comment];
     if (value.length < 1) {
       alert('댓글을 입력해주세요');
     } else {
-      copyComment.push(value); //value = e.target.value를 []에 넣어주는 중
-      // console.log('copyComment : ', copyComment); //copyComment = [value, value, value]
+      copyComment.push(value);
+      // console.log('copyComment : ', copyComment);
       setComment(copyComment); //copyComment로 comment 계속 업데이트 해주기.
-      // console.log('comment : ', comment); // comment = [value, value, value]
+      // console.log('comment : ', comment);
       setValue('');
     }
   };

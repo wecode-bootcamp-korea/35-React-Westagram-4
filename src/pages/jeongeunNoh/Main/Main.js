@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './Main.scss';
 import Feeds from '../../../components/Feeds';
 
-function MainJeongEun(props) {
+function MainJeongEun() {
   const [feedData, setFeedData] = useState([]);
 
   useEffect(() => {
@@ -46,11 +46,12 @@ function MainJeongEun(props) {
               <img src="/images/jeongeunNoh/right1.jpeg" alt="myInsta" />
               <div className="storyId">
                 <p>
-                  <strong>jeongeuni__</strong>
+                  <strong>ssss</strong>
                 </p>
                 <p className="weight">노정은</p>
               </div>
             </div>
+
             <div className="story">
               <img src="/images/jeongeunNoh/right2.jpeg" alt="myInsta" />
               <div className="storyId">
@@ -60,6 +61,7 @@ function MainJeongEun(props) {
                 <p className="weight">노정은</p>
               </div>
             </div>
+
             <div className="story">
               <img src="/images/jeongeunNoh/right3.jpeg" alt="myInsta" />
               <div className="storyId">
@@ -69,6 +71,7 @@ function MainJeongEun(props) {
                 <p className="weight">노정은</p>
               </div>
             </div>
+
             <div className="story">
               <img src="/images/jeongeunNoh/right4.jpeg" alt="myInsta" />
               <div className="storyId">
@@ -133,5 +136,4 @@ function MainJeongEun(props) {
     </main>
   );
 }
-
 export default MainJeongEun;
