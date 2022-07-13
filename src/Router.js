@@ -36,7 +36,7 @@ function Router() {
         <Route path="/main-geumgwan" element={<MainGeumGwan />} />
         {/* 제홍 */}
         <Route path="/login-jaehong" element={<LoginJaeHong />} />
-        <Route path="/login-jaehong" element={<MainJaeHong />} />
+        <Route path="/main-jaehong" element={<MainJaeHong />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,73 @@
+.login-jaeHong {
+  font-family: 'Lobster', sans-serif;
+  box-sizing: border-box;
+
+  .loginBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 750px;
+    width: 700px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 1px;
+
+    h1 {
+      font-size: 80px;
+      color: black;
+      text-decoration: none;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .inputBlank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .id,
+    .password {
+      height: 75px;
+      width: 530px;
+      padding-left: 3%;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+
+    .id {
+      margin-bottom: 15px;
+    }
+
+    .password {
+      margin-bottom: 30px;
+    }
+  }
+  .unactivatedBtn,
+  .activatedBtn {
+    height: 60px;
+    width: 530px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .activatedBtn {
+    background-color: #0095f6;
+  }
+
+  .unactivatedBtn {
+    background-color: #c4e1f7;
+  }
+
+  p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: #325a85;
+    align-self: center;
+  }
+}
