@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import './Login.scss';
 import { useNavigate } from 'react-router-dom';
+import './Login.scss';
 
 function LoginIkHyun() {
-  const [id, setId] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const idValue = ({ target }) => {
     const updateId = target.value;
-    setId(updateId);
+    setEmail(updateId);
   };
 
   const pwdValue = ({ target }) => {
@@ -16,7 +16,8 @@ function LoginIkHyun() {
     setPassword(updatePwd);
   };
 
-  const goToMain = id.includes('@') && password.length >= 5;
+  const goToMain = email.includes('@') && password.length >= 5;
+
   const navigation = useNavigate();
   const login = () => {
     navigation('/main-ikhyun');
@@ -28,6 +29,23 @@ function LoginIkHyun() {
         login();
       }
     }
+  };
+
+  const getToken = () => {
+    fetch('http://10.58.3.198:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.token) {
+          localStorage.setItem('login-token', result.token);
+          login();
+        }
+      });
   };
   return (
     <div className="login-box">
@@ -49,7 +67,7 @@ function LoginIkHyun() {
         />
         {/* <Link to="/main"> */}
         <button
-          onClick={login}
+          onClick={getToken}
           className="login-button"
           disabled={!goToMain}
           style={goToMain ? { opacity: '1' } : { opacity: '' }}
