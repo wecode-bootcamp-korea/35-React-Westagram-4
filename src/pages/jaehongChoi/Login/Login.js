@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import MainJaeHong from '../Main/Main';
 import './Login.scss';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 function LoginJaeHong() {
   return (
     <div className="login-jaeHong">
-      <div className="wholePage">
-        <div className="loginBox">
-          <div className="logoBox">
-            <Link to="/main-jaehong">
-              <h1>Westagram</h1>
-            </Link>
-          </div>
-          <LoginElement />
-          <p>비밀번호를 잊으셨나요?</p>
-        </div>
+      <div className="loginBox">
+        <Link to="/main-jaehong">
+          <h1>Westagram</h1>
+        </Link>
+        <LoginElement />
+        <p>비밀번호를 잊으셨나요?</p>
       </div>
     </div>
   );
@@ -26,6 +22,7 @@ const LoginElement = () => {
   const [password, setPassword] = useState('');
   const [isActive, setIsActive] = useState(false);
 
+  // // /* ID 유효성 검사*/
   const handleIdInput = event => {
     setId(event.target.value);
     if (event.target.value.includes('@') && password.length > 4) {
@@ -35,6 +32,7 @@ const LoginElement = () => {
     }
   };
 
+  // // /*PASSWORD 유효성 검사*/
   const handlePwInput = event => {
     setPassword(event.target.value);
     if (id.includes('@') && event.target.value.length > 4) {
@@ -44,8 +42,25 @@ const LoginElement = () => {
     }
   };
 
+  /*useNavigate hook사용 페이지이동 함수*/
   const navigate = useNavigate();
   const goToMain = () => navigate('/main-jaehong');
+  // const goToMain = e => {
+  //   console.log('sdfsdf');
+  //   e.preventDefault();
+  //   fetch('http://10.58.6.45:8000/user/signup', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       email: id,
+  //       password: password,
+  //       name: '최재홍',
+  //       mobile_number: '010239012930',
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => localStorage.setItem('key', result.token));
+  // };
+  //
 
   return (
     <div className="inputBlank">

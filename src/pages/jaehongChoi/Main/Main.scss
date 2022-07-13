@@ -186,6 +186,10 @@ html {
               width: 100%;
               position: relative;
 
+              .onSubmitComment {
+                margin-left: 5px;
+              }
+
               .replyUserDiv {
                 display: flex;
                 justify-content: space-between;
@@ -226,7 +230,8 @@ html {
               padding-top: 8px;
             }
 
-            .replyBtn {
+            .activatedBtn,
+            .unactivatedBtn {
               border: 0;
               background-color: white;
               color: #5494ac;
