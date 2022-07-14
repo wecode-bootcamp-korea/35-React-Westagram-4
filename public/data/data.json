@@ -1,0 +1,62 @@
+[
+  {
+    "id": "wecode_bootcamp",
+    "nickname": "Wecode | 위코드",
+    "img": "images/ikhyunKim/3.png"
+  },
+  {
+    "id": "wecode_founder",
+    "nickname": "송은우 (Eun Woo Song)",
+    "img": "images/ikhyunKim/recommend3.jpg"
+  },
+  {
+    "id": "wjddms4107",
+    "nickname": "노정은 (Noh Jeong Eun)",
+    "img": "images/ikhyunKim/wjddms4107.png"
+  },
+  {
+    "id": "pjyong01",
+    "nickname": "박정용 (Park Jeong Yong)",
+    "img": "images/ikhyunKim/pjyong01.png"
+  },
+  {
+    "id": "gongwon35.b",
+    "nickname": "박성은 (Park Seong Eun)",
+    "img": "images/ikhyunKim/gongwon35.b.png"
+  },
+  {
+    "id": "minjee4281",
+    "nickname": "손민지 (Son Min Jee)",
+    "img": "images/ikhyunKim/minjee4281.png"
+  },
+  {
+    "id": "schk9611",
+    "nickname": "손찬규 (Son Chan Kyu)",
+    "img": "images/ikhyunKim/schk9611.png"
+  },
+  {
+    "id": "willy624777",
+    "nickname": "이원재 (Lee Won Jae)",
+    "img": "images/ikhyunKim/willy624777.png"
+  },
+  {
+    "id": "ljhun9012",
+    "nickname": "이정훈 (Lee Jeong Hoon)",
+    "img": "images/ikhyunKim/ljhun9012.png"
+  },
+  {
+    "id": "kangteuck",
+    "nickname": "이혜진 (Lee Hye Jin)",
+    "img": "images/ikhyunKim/kangteuck.png"
+  },
+  {
+    "id": "yelihi19",
+    "nickname": "최원익 (Choi Won Ik)",
+    "img": "images/ikhyunKim/yelihi19.png"
+  },
+  {
+    "id": "och.changhoon",
+    "nickname": "오창훈 (Oh Chang Hoon)",
+    "img": "images/ikhyunKim/och.changhoon.png"
+  }
+]

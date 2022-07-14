@@ -1,58 +1,13 @@
 import React from 'react';
 import './Main.scss';
-import Comment from '../../../components/Comment/Comment';
 
+import Feeds from './feeds/feeds';
 function MainIkHyun() {
   return (
     <div className="main">
       <main>
         <div className="feeds">
-          <article className="article">
-            <div className="article-top">
-              <div className="logo-and-name">
-                <div className="article-logobox">
-                  <img src="/images/ikhyunKim/1.JPG" alt="" />
-                </div>
-                <p>ik_hyun2</p>
-              </div>
-              <i id="article-more" className="fa-solid fa-ellipsis" />
-            </div>
-            <div className="article-main-imgbox">
-              <img src="/images/ikhyunKim/IMG_3572.JPG" alt="" />
-            </div>
-            <div className="article-icon-bar">
-              <div className="article-icon">
-                <i className="fa-solid fa-heart" style={{ color: 'red' }} />
-                <i className="fa-regular fa-comment" />
-                <i className="fa-solid fa-arrow-up-from-bracket" />
-              </div>
-              <i className="fa-regular fa-bookmark" />
-            </div>
-            <Comment />
-          </article>
-          <article className="article">
-            <div className="article-top">
-              <div className="logo-and-name">
-                <div className="article-logobox">
-                  <img src="/images/ikhyunKim/1.JPG" alt="" />
-                </div>
-                <p>ik_hyun2</p>
-              </div>
-              <i id="article-more" className="fa-solid fa-ellipsis" />
-            </div>
-            <div className="article-main-imgbox">
-              <img src="/images/ikhyunKim/IMG_2923.JPG" alt="" />
-            </div>
-            <div className="article-icon-bar">
-              <div className="article-icon">
-                <i className="fa-solid fa-heart" style={{ color: 'red' }} />
-                <i className="fa-regular fa-comment" />
-                <i className="fa-solid fa-arrow-up-from-bracket" />
-              </div>
-              <i className="fa-regular fa-bookmark" />
-            </div>
-            <Comment />
-          </article>
+          <Feeds />
         </div>
         <div className="main-right">
           <div className="wecode-top">

@@ -3,20 +3,20 @@ import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 function LoginIkHyun() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [loginData, setLoginData] = useState({
+    id: '',
+    password: '',
+  });
 
-  const idValue = ({ target }) => {
-    const updateId = target.value;
-    setEmail(updateId);
+  const loginDataValue = ({ target }) => {
+    const { name, value } = target;
+    setLoginData({ ...loginData, [name]: value });
   };
 
-  const pwdValue = ({ target }) => {
-    const updatePwd = target.value;
-    setPassword(updatePwd);
-  };
+  const { id, password } = loginData;
 
-  const goToMain = email.includes('@') && password.length >= 5;
+  // console.log(localStorage.getItem('token'));
+  const goToMain = id.includes('@') && password.length >= 5;
 
   const navigation = useNavigate();
   const login = () => {
@@ -26,7 +26,7 @@ function LoginIkHyun() {
   const checkEnter = e => {
     if (e.key === 'Enter') {
       if (goToMain) {
-        login();
+        getToken();
       }
     }
   };
@@ -35,7 +35,7 @@ function LoginIkHyun() {
     fetch('http://10.58.3.198:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({
-        email: email,
+        email: id,
         password: password,
       }),
     })
@@ -44,6 +44,8 @@ function LoginIkHyun() {
         if (result.token) {
           localStorage.setItem('login-token', result.token);
           login();
+        } else {
+          alert('이메일 및 비밀번호 값을 확인해주세요!');
         }
       });
   };
@@ -52,17 +54,19 @@ function LoginIkHyun() {
       <div className="login">
         <h1>Westagram</h1>
         <input
+          name="id"
           className="login-id"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
-          onChange={idValue}
+          onChange={loginDataValue}
           onKeyUp={checkEnter}
         />
         <input
+          name="password"
           className="login-password"
           type="password"
           placeholder="비밀번호"
-          onChange={pwdValue}
+          onChange={loginDataValue}
           onKeyUp={checkEnter}
         />
         {/* <Link to="/main"> */}

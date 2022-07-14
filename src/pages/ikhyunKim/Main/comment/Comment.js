@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './Comment.scss';
 export default function Comment() {
   const [commentValue, setCommentValue] = useState('');
   const [commentList, setCommentList] = useState([]);
