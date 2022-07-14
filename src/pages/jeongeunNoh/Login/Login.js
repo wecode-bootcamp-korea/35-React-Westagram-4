@@ -6,7 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 function LoginJeongEun() {
   const navigate = useNavigate();
 
-  const goToMain = () => {
+  const goToMain = e => {
+    navigate('/main-jeongeun');
     // fetch('https://westagram-signup.herokuapp.com/login', {
     //   method: 'POST',
     //   body: JSON.stringify({
@@ -23,13 +24,12 @@ function LoginJeongEun() {
     //       console.log(localStorage.getItem('ACCESS_TOKEN'));
     //     }
     //   });
-    navigate('/main-jeongeun');
   };
 
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
 
-  const isTrue = id.includes('@') && pw.length >= 5;
+  const isButtonActive = id.includes('@') && pw.length >= 5;
 
   const handleIdInput = e => {
     // console.log(e.target.value)
@@ -60,13 +60,37 @@ function LoginJeongEun() {
       <button
         type="button"
         onClick={goToMain}
-        style={
-          isTrue ? { backgroundColor: 'blue' } : { backgroundColor: '#BEE2FD' }
-        }
-        disabled={!isTrue} //true일 때 재역할을 함, isTrue가 true면 disabled는 false가 되어 main에 들어갈 수 있음.
+        className={isButtonActive ? 'activated' : 'deactivated'}
+        // style={
+        //   isTrue ? { backgroundColor: 'blue' } : { backgroundColor: '#BEE2FD' }
+        // }
+        disabled={!isButtonActive} //true일 때 재역할을 함, isTrue가 true면 disabled는 false가 되어 main에 들어갈 수 있음.
       >
         로그인
       </button>
+      {/* <input
+        onChange={handleIdInput}
+        className="id"
+        type="text"
+        placeholder="전화번호, 사용자 이름 또는 이메일"
+      />
+      <input
+        onChange={handlePwInput}
+        className="password"
+        type="password"
+        placeholder="비밀번호"
+      />
+      <button
+        type="button"
+        onClick={goToMain}
+        className={isButtonActive ? 'activated' : 'deactivated'}
+        // style={
+        //   isTrue ? { backgroundColor: 'blue' } : { backgroundColor: '#BEE2FD' }
+        // }
+        disabled={!isButtonActive} //true일 때 재역할을 함, isTrue가 true면 disabled는 false가 되어 main에 들어갈 수 있음.
+      >
+        로그인
+      </button> */}
       <a href="/" className="notice">
         비밀번호를 잊으셨나요?
       </a>

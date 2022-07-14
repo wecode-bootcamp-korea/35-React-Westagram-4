@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable react/destructuring-assignment */
 import React, { useState, useEffect } from 'react';
 import './Main.scss';
@@ -5,12 +6,22 @@ import Feeds from '../../../components/Feeds';
 
 function MainJeongEun() {
   const [feedData, setFeedData] = useState([]);
+  const [storyData, setStoryData] = useState([]);
 
   useEffect(() => {
     fetch('/data/feedData.json')
       .then(res => res.json())
       .then(data => {
         setFeedData(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch('/data/storyData.json')
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        setStoryData(data);
       });
   }, []);
 
@@ -42,45 +53,9 @@ function MainJeongEun() {
           </div>
 
           <div className="storys">
-            <div className="story">
-              <img src="/images/jeongeunNoh/right1.jpeg" alt="myInsta" />
-              <div className="storyId">
-                <p>
-                  <strong>ssss</strong>
-                </p>
-                <p className="weight">노정은</p>
-              </div>
-            </div>
-
-            <div className="story">
-              <img src="/images/jeongeunNoh/right2.jpeg" alt="myInsta" />
-              <div className="storyId">
-                <p>
-                  <strong>jeongeuni__</strong>
-                </p>
-                <p className="weight">노정은</p>
-              </div>
-            </div>
-
-            <div className="story">
-              <img src="/images/jeongeunNoh/right3.jpeg" alt="myInsta" />
-              <div className="storyId">
-                <p>
-                  <strong>jeongeuni__</strong>
-                </p>
-                <p className="weight">노정은</p>
-              </div>
-            </div>
-
-            <div className="story">
-              <img src="/images/jeongeunNoh/right4.jpeg" alt="myInsta" />
-              <div className="storyId">
-                <p>
-                  <strong>jeongeuni__</strong>
-                </p>
-                <p className="weight">노정은</p>
-              </div>
-            </div>
+            {storyData.map(storyData => {
+              return <Story key={storyData.id} storyData={storyData} />;
+            })}
           </div>
         </div>
 
@@ -134,6 +109,20 @@ function MainJeongEun() {
         </div>
       </div>
     </main>
+  );
+}
+
+function Story(props) {
+  return (
+    <div className="story">
+      <img src={props.storyData.img} alt="myInsta" />
+      <div className="storyId">
+        <p>
+          <strong>{props.storyData.userId}</strong>
+        </p>
+        <p className="weight">{props.storyData.userName}</p>
+      </div>
+    </div>
   );
 }
 export default MainJeongEun;

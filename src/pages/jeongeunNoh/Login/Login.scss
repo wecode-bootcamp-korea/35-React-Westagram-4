@@ -52,6 +52,14 @@ body {
     height: 8%;
   }
 
+  .activated {
+    background-color: blue;
+  }
+
+  .deactivated {
+    background-color: #bee2fd;
+  }
+
   .notice {
     position: absolute;
     color: #00376b;
