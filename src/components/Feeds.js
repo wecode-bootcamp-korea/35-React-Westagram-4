@@ -1,7 +1,8 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { useState } from 'react';
+import YourComment from './YourComment';
 
-function Feeds(props) {
+function Feeds({ feedData }) {
   const [value, setValue] = useState('');
   const [comment, setComment] = useState([]);
 
@@ -16,9 +17,7 @@ function Feeds(props) {
       alert('댓글을 입력해주세요');
     } else {
       copyComment.push(value);
-      // console.log('copyComment : ', copyComment);
       setComment(copyComment); //copyComment로 comment 계속 업데이트 해주기.
-      // console.log('comment : ', comment);
       setValue('');
     }
   };
@@ -27,14 +26,14 @@ function Feeds(props) {
     <div className="feeds">
       <article className="mainFeed">
         <div className="mainFeedBar">
-          <img src={props.feedData.avatarImg} alt="circleimg" />
+          <img src={feedData.avatarImg} alt="circleimg" />
           <span>
-            <strong>{props.feedData.avatarName}</strong>
+            <strong>{feedData.avatarName}</strong>
           </span>
           <i className="fa-solid fa-ellipsis" />
         </div>
         <div className="mainFeedImg">
-          <img src={props.feedData.feedImg} alt="mainfeedimg" />
+          <img src={feedData.feedImg} alt="mainfeedimg" />
         </div>
         <div className="mainFeedContents">
           <div className="contentsIcons">
@@ -56,18 +55,16 @@ function Feeds(props) {
               </span>
             </div>
             <div className="myComment">
-              <strong>{props.feedData.avatarName}</strong>&nbsp;&nbsp;
-              {props.feedData.content}
+              <strong>{feedData.avatarName}</strong>&nbsp;&nbsp;
+              {feedData.content}
               <span className="weight">&nbsp;더 보기</span>
             </div>
           </div>
 
           <div className="yourComment">
             <span className="comment">
-              <strong>{props.feedData.friendName}</strong>
-              <span className="realComment">
-                {props.feedData.friendComment}
-              </span>
+              <strong>{feedData.friendName}</strong>
+              <span className="realComment">{feedData.friendComment}</span>
             </span>
             <span className="smallheart_delete">
               <i
@@ -76,17 +73,14 @@ function Feeds(props) {
                 }}
                 className="smallheart fa-regular fa-heart"
               />
-              <i
-                onClick={props.deleteComment}
-                className="delete fa-solid fa-eraser"
-              />
+              <i className="delete fa-solid fa-eraser" />
             </span>
           </div>
 
           {comment.map((data, i) => {
             return (
               <YourComment
-                key={i}
+                key={data + i}
                 data={data}
                 deleteComment={() => {
                   let copyComment = [...comment];
@@ -113,27 +107,6 @@ function Feeds(props) {
         />
         <input type="submit" className="inputSubmit" value="게시" />
       </form>
-    </div>
-  );
-}
-
-function YourComment(props) {
-  const { data, deleteComment } = props;
-  return (
-    <div className="yourComment">
-      <span className="comment">
-        <strong>yourID</strong>
-        <span className="realComment">{data}</span>
-      </span>
-      <span className="smallheart_delete">
-        <i
-          onClick={e => {
-            e.target.classList.replace('fa-regular', 'fa-solid');
-          }}
-          className="smallheart fa-regular fa-heart"
-        />
-        <i onClick={deleteComment} className="delete fa-solid fa-eraser" />
-      </span>
     </div>
   );
 }

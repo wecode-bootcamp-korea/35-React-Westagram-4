@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { useState } from 'react';
-import './Login.scss';
 import { Link, useNavigate } from 'react-router-dom';
+import './Login.scss';
 
 function LoginJeongEun() {
   const navigate = useNavigate();
@@ -26,35 +26,34 @@ function LoginJeongEun() {
     //   });
   };
 
-  const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
-  // const [inputValues, setInputValues] = useState({
-  //   email: '',
-  //   password: '',
-  // });
-  // 조건은 어떻게 적용시키는지?
+  // const [id, setId] = useState('');
+  // const [pw, setPw] = useState('');
 
+  const [userData, setUserData] = useState({
+    id: '',
+    pw: '',
+  });
+  // [{ id : '', pw: ''}, f]
+
+  const { id, pw } = userData;
   const isButtonActive = id.includes('@') && pw.length >= 5;
 
-  // inputValues[email].includes('@') && inputValues[password].length >= 5;
+  const writeUserData = e => {
+    // console.log(e);
+    const { name, value } = e.target; //e.target의 name과 value key를 이용하겠다.
+    setUserData({ ...userData, [name]: value }); //스프레드 연산자. 이전 값 복제한 뒤에 추가되는 부분을 넣어주겠다.
+  };
+  // console.log(userData)
 
-  // const handleInput = e => {
-  //   const { name, value } = e.target;
-  //   setInputValues({
-  //     ...inputValues,
-  //     [name]: value,
-  //   });
+  // const handleIdInput = e => {
+  //   const { value } = e.target;
+  //   setId(value);
   // };
 
-  const handleIdInput = e => {
-    const { value } = e.target;
-    setId(value);
-  };
-
-  const handlePwInput = e => {
-    const { value } = e.target;
-    setPw(value);
-  };
+  // const handlePwInput = e => {
+  //   const { value } = e.target;
+  //   setPw(value);
+  // };
 
   return (
     <div className="Login">
@@ -62,16 +61,16 @@ function LoginJeongEun() {
         <h1 className="logo">westagram</h1>
       </Link>
       <input
-        onChange={handleIdInput}
+        onChange={writeUserData}
         className="id"
-        name="email"
+        name="id"
         type="text"
         placeholder="전화번호, 사용자 이름 또는 이메일"
       />
       <input
-        onChange={handlePwInput}
+        onChange={writeUserData}
         className="password"
-        name="password"
+        name="pw"
         type="password"
         placeholder="비밀번호"
       />

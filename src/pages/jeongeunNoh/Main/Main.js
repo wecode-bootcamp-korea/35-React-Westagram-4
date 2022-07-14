@@ -1,10 +1,13 @@
 /* eslint-disable no-console */
 /* eslint-disable react/destructuring-assignment */
 import React, { useState, useEffect } from 'react';
-import './Main.scss';
 import Feeds from '../../../components/Feeds';
+import Story from './Story';
+import Recommendation from './Recommendation';
+import './Main.scss';
 
 function MainJeongEun() {
+  // mock data를 생활화하자, 반복되는 구조는 최대한 줄이자.
   const [feedData, setFeedData] = useState([]);
   const [storyData, setStoryData] = useState([]);
   const [recommendationData, setRecommendationData] = useState([]);
@@ -59,7 +62,6 @@ function MainJeongEun() {
               <strong>모두 보기</strong>
             </span>
           </div>
-
           <div className="storys">
             {storyData.map(storyData => {
               return <Story key={storyData.id} storyData={storyData} />;
@@ -76,7 +78,7 @@ function MainJeongEun() {
           </div>
           {recommendationData.map(recommendationData => {
             return (
-              <RecommendationData
+              <Recommendation
                 key={recommendationData.id}
                 recommendationData={recommendationData}
               />
@@ -96,32 +98,4 @@ function MainJeongEun() {
   );
 }
 
-function Story(props) {
-  return (
-    <div className="story">
-      <img src={props.storyData.img} alt="myInsta" />
-      <div className="storyId">
-        <p>
-          <strong>{props.storyData.userId}</strong>
-        </p>
-        <p className="weight">{props.storyData.userName}</p>
-      </div>
-    </div>
-  );
-}
-
-function RecommendationData(props) {
-  return (
-    <div className="recommendPeopel">
-      <img src={props.recommendationData.img} alt="myInsta" />
-      <div className="recommendId">
-        <p>
-          <strong>{props.recommendationData.userName}</strong>
-        </p>
-        <p className="weight">{props.recommendationData.text}</p>
-      </div>
-      <span className="follow">팔로우</span>
-    </div>
-  );
-}
 export default MainJeongEun;
