@@ -24,7 +24,7 @@ function Feeds(props) {
   };
 
   return (
-    <div key={props.feedData.id} className="feeds">
+    <div className="feeds">
       <article className="mainFeed">
         <div className="mainFeedBar">
           <img src={props.feedData.avatarImg} alt="circleimg" />
@@ -118,11 +118,12 @@ function Feeds(props) {
 }
 
 function YourComment(props) {
+  const { data, deleteComment } = props;
   return (
     <div className="yourComment">
       <span className="comment">
         <strong>yourID</strong>
-        <span className="realComment">{props.data}</span>
+        <span className="realComment">{data}</span>
       </span>
       <span className="smallheart_delete">
         <i
@@ -131,10 +132,7 @@ function YourComment(props) {
           }}
           className="smallheart fa-regular fa-heart"
         />
-        <i
-          onClick={props.deleteComment}
-          className="delete fa-solid fa-eraser"
-        />
+        <i onClick={deleteComment} className="delete fa-solid fa-eraser" />
       </span>
     </div>
   );

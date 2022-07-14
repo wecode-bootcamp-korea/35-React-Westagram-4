@@ -7,6 +7,7 @@ import Feeds from '../../../components/Feeds';
 function MainJeongEun() {
   const [feedData, setFeedData] = useState([]);
   const [storyData, setStoryData] = useState([]);
+  const [recommendationData, setRecommendationData] = useState([]);
 
   useEffect(() => {
     fetch('/data/feedData.json')
@@ -20,8 +21,15 @@ function MainJeongEun() {
     fetch('/data/storyData.json')
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         setStoryData(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch('/data/recommendationData.json')
+      .then(res => res.json())
+      .then(data => {
+        setRecommendationData(data);
       });
   }, []);
 
@@ -66,38 +74,14 @@ function MainJeongEun() {
               <strong>모두 보기</strong>
             </span>
           </div>
-          <div className="recommendPeopel">
-            <img src="/images/jeongeunNoh/right5.jpeg" alt="myInsta" />
-            <div className="recommendId">
-              <p>
-                <strong>jeongeuni__</strong>
-              </p>
-              <p className="weight">_legend_a님 외 2명이...</p>
-            </div>
-            <span className="follow">팔로우</span>
-          </div>
-
-          <div className="recommendPeopel">
-            <img src="/images/jeongeunNoh/right6.jpeg" alt="myInsta" />
-            <div className="recommendId">
-              <p>
-                <strong>jeongeuni__</strong>
-              </p>
-              <p className="weight">ringo.in.seoul님 외 12...</p>
-            </div>
-            <span className="follow">팔로우</span>
-          </div>
-
-          <div className="recommendPeopel">
-            <img src="/images/jeongeunNoh/right7.jpeg" alt="myInsta" />
-            <div className="recommendId">
-              <p>
-                <strong>jeongeuni__</strong>
-              </p>
-              <p className="weight">jimmtlee1220님 외 1...</p>
-            </div>
-            <span className="follow">팔로우</span>
-          </div>
+          {recommendationData.map(recommendationData => {
+            return (
+              <RecommendationData
+                key={recommendationData.id}
+                recommendationData={recommendationData}
+              />
+            );
+          })}
         </div>
 
         <div className="footer">
@@ -122,6 +106,21 @@ function Story(props) {
         </p>
         <p className="weight">{props.storyData.userName}</p>
       </div>
+    </div>
+  );
+}
+
+function RecommendationData(props) {
+  return (
+    <div className="recommendPeopel">
+      <img src={props.recommendationData.img} alt="myInsta" />
+      <div className="recommendId">
+        <p>
+          <strong>{props.recommendationData.userName}</strong>
+        </p>
+        <p className="weight">{props.recommendationData.text}</p>
+      </div>
+      <span className="follow">팔로우</span>
     </div>
   );
 }

@@ -17,14 +17,14 @@ body {
 
 /* nav */
 nav {
-  background-color: $white-color;
   @include layout($align: null);
+  background-color: $white-color;
   border-bottom: $border-style;
 
   .navBar {
+    @include layout($justify: space-around);
     height: 60px;
     width: 1200px;
-    @include layout($justify: space-around);
 
     img {
       width: 20px;
@@ -32,16 +32,15 @@ nav {
     }
 
     .leftMenu {
-      display: flex;
-      align-items: center;
+      @include layout($align: null);
 
       #westagram {
-        border-left: 1px solid;
         margin: 0 18px;
         padding-left: 10px;
+        padding-bottom: 8px;
+        border-left: 1px solid;
         font-family: 'Lobster', cursive;
         font-size: 20px;
-        padding-bottom: 8px;
       }
     }
 
@@ -97,19 +96,18 @@ main {
 
   .feeds {
     width: 540px;
-    // height: 100%;
     margin-right: 20px;
     margin-bottom: 20px;
-    background-color: $white-color;
     border: $border-style;
+    background-color: $white-color;
 
     .mainFeed {
       position: relative;
       height: 100%;
 
       .mainFeedBar {
-        height: 60px;
         @include layout($justify: null);
+        height: 60px;
         padding: 20px;
 
         img {
@@ -125,8 +123,8 @@ main {
 
         i {
           position: absolute;
-          font-size: 17px;
           right: 20px;
+          font-size: 17px;
         }
       }
 
@@ -143,8 +141,8 @@ main {
         height: 100%;
 
         .contentsIcons {
-          height: 40px;
           @include layout($justify: space-between);
+          height: 40px;
           padding: 3px 8px;
 
           i {
@@ -214,9 +212,9 @@ main {
             }
 
             .delete {
-              font-size: 13px;
               padding: 5px 0;
               padding-left: 2px;
+              font-size: 13px;
             }
           }
         }
@@ -231,22 +229,22 @@ main {
     }
 
     .mainFeedComment {
-      height: 60px;
       @include layout($align: null, $justify: space-between);
+      height: 60px;
       border-top: $border-style;
 
       .inputComment {
-        outline: none;
-        border: 0px;
-        padding: 8px;
         width: 100%;
+        padding: 8px;
+        border: 0px;
         color: $dark-gray-color;
         font-size: 15px;
+        outline: none;
       }
 
       .inputSubmit {
-        border: 0px;
         padding: 8px;
+        border: 0px;
         background-color: $white-color;
         color: #bde2fd;
         font-size: 15px;
@@ -259,8 +257,8 @@ main {
     height: 560px;
 
     .myInsta {
-      height: 60px;
       @include layout($justify: null);
+      height: 60px;
 
       img {
         width: 40px;
@@ -272,7 +270,6 @@ main {
         padding: 0 13px;
 
         p {
-          // line-height: 1.5px;
           font-size: 13px;
         }
       }
@@ -284,8 +281,8 @@ main {
       border: $border-style;
 
       .storysVar {
-        padding: 8px 16px 0 16px;
         @include layout($justify: space-between);
+        padding: 8px 16px 0 16px;
 
         span {
           font-size: 13px;
@@ -313,7 +310,6 @@ main {
             padding: 0 13px;
 
             p {
-              // line-height: 1.5px;
               font-size: 13px;
             }
           }
@@ -323,13 +319,13 @@ main {
 
     .freindRecommendBox {
       height: 170px;
-      background-color: $white-color;
-      border: $border-style;
       margin: 10px 0;
+      border: $border-style;
+      background-color: $white-color;
 
       .recommendVar {
-        padding: 8px 16px 0 16px;
         @include layout($justify: space-between);
+        padding: 8px 16px 0 16px;
 
         span {
           font-size: 13px;
@@ -349,29 +345,27 @@ main {
         }
 
         .recommendId {
-          padding: 0 13px;
           width: 165px;
+          padding: 0 13px;
 
           p {
-            // line-height: 1.5px;
             font-size: 13px;
           }
         }
 
         .follow {
+          position: relative;
           font-size: 13px;
           font-weight: bold;
           color: #009af4;
-          position: relative;
         }
       }
     }
 
     .footer {
       height: 130px;
-      color: $dark-gray-color;
-      // line-height: 1.5px;
       font-size: 13px;
+      color: $dark-gray-color;
     }
   }
 }

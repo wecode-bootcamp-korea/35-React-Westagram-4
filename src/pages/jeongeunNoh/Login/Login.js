@@ -28,16 +28,32 @@ function LoginJeongEun() {
 
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
+  // const [inputValues, setInputValues] = useState({
+  //   email: '',
+  //   password: '',
+  // });
+  // 조건은 어떻게 적용시키는지?
 
   const isButtonActive = id.includes('@') && pw.length >= 5;
 
+  // inputValues[email].includes('@') && inputValues[password].length >= 5;
+
+  // const handleInput = e => {
+  //   const { name, value } = e.target;
+  //   setInputValues({
+  //     ...inputValues,
+  //     [name]: value,
+  //   });
+  // };
+
   const handleIdInput = e => {
-    // console.log(e.target.value)
-    setId(e.target.value); // 이 값이 계속 id로 들어가고 있음
+    const { value } = e.target;
+    setId(value);
   };
 
   const handlePwInput = e => {
-    setPw(e.target.value); // 이 값이 계속 pw로 들어가고 있음
+    const { value } = e.target;
+    setPw(value);
   };
 
   return (
@@ -48,19 +64,21 @@ function LoginJeongEun() {
       <input
         onChange={handleIdInput}
         className="id"
+        name="email"
         type="text"
         placeholder="전화번호, 사용자 이름 또는 이메일"
       />
       <input
         onChange={handlePwInput}
         className="password"
+        name="password"
         type="password"
         placeholder="비밀번호"
       />
       <button
-        type="button"
         onClick={goToMain}
         className={isButtonActive ? 'activated' : 'deactivated'}
+        type="button"
         // style={
         //   isTrue ? { backgroundColor: 'blue' } : { backgroundColor: '#BEE2FD' }
         // }
@@ -68,29 +86,6 @@ function LoginJeongEun() {
       >
         로그인
       </button>
-      {/* <input
-        onChange={handleIdInput}
-        className="id"
-        type="text"
-        placeholder="전화번호, 사용자 이름 또는 이메일"
-      />
-      <input
-        onChange={handlePwInput}
-        className="password"
-        type="password"
-        placeholder="비밀번호"
-      />
-      <button
-        type="button"
-        onClick={goToMain}
-        className={isButtonActive ? 'activated' : 'deactivated'}
-        // style={
-        //   isTrue ? { backgroundColor: 'blue' } : { backgroundColor: '#BEE2FD' }
-        // }
-        disabled={!isButtonActive} //true일 때 재역할을 함, isTrue가 true면 disabled는 false가 되어 main에 들어갈 수 있음.
-      >
-        로그인
-      </button> */}
       <a href="/" className="notice">
         비밀번호를 잊으셨나요?
       </a>

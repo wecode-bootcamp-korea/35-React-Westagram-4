@@ -2,25 +2,25 @@
   {
     "id": 1,
     "img": "./images/jeongeunNoh/right1.jpeg",
-    "userId": "aaaa",
+    "userId": "component1",
     "userName": "노노노"
   },
   {
     "id": 2,
     "img": "./images/jeongeunNoh/right2.jpeg",
-    "userId": "bbbb",
+    "userId": "component2",
     "userName": "정정정"
   },
   {
     "id": 3,
     "img": "./images/jeongeunNoh/right3.jpeg",
-    "userId": "cccc",
+    "userId": "component3",
     "userName": "은은은"
   },
   {
     "id": 4,
     "img": "./images/jeongeunNoh/right4.jpeg",
-    "userId": "dddd",
+    "userId": "component4",
     "userName": "마지막"
   }
 ]
