@@ -30,8 +30,8 @@ function MainIkHyun() {
                   <img src="/images//ikhyunKim/storty1.jpg" alt="" />
                 </div>
                 <div className="story-name">
-                  <p style={{ fontWeight: 'bold' }}>_yum_s</p>
-                  <p style={{ color: 'gray' }}>16분전</p>
+                  <p className="story-name-id">_yum_s</p>
+                  <p className="story-name-time">16분전</p>
                 </div>
               </div>
               <div className="storyimg-and-name">
@@ -39,8 +39,8 @@ function MainIkHyun() {
                   <img src="/images/ikhyunKim/story2.jpg" alt="" />
                 </div>
                 <div className="story-name">
-                  <p style={{ fontWeight: 'bold' }}>drink_eat_drink</p>
-                  <p style={{ color: 'gray' }}>3시간전</p>
+                  <p className="story-name-id">drink_eat_drink</p>
+                  <p className="story-name-time">3시간전</p>
                 </div>
               </div>
               <div className="storyimg-and-name">
@@ -48,8 +48,8 @@ function MainIkHyun() {
                   <img src="/images/ikhyunKim/story3.jpg" alt="" />
                 </div>
                 <div className="story-name">
-                  <p style={{ fontWeight: 'bold' }}>hyukyc</p>
-                  <p style={{ color: 'gray' }}>20시간전</p>
+                  <p className="story-name-id">hyukyc</p>
+                  <p className="story-name-time">20시간전</p>
                 </div>
               </div>
               <div className="storyimg-and-name">
@@ -57,8 +57,8 @@ function MainIkHyun() {
                   <img src="/images/ikhyunKim/story4.jpg" alt="" />
                 </div>
                 <div className="story-name">
-                  <p style={{ fontWeight: 'bold' }}>jminkeek</p>
-                  <p style={{ color: 'gray' }}>1일전</p>
+                  <p className="story-name-id">jminkeek</p>
+                  <p className="story-name-time">1일전</p>
                 </div>
               </div>
               <div className="storyimg-and-name">
@@ -66,10 +66,8 @@ function MainIkHyun() {
                   <img src="/images/ikhyunKim/story5.jpg" alt="" />
                 </div>
                 <div className="story-name">
-                  <p className="story-blackname" style={{ fontWeight: 'bold' }}>
-                    _yum_s
-                  </p>
-                  <p style={{ color: 'gray' }}>2일전</p>
+                  <p className="story-name-id">_yum_s</p>
+                  <p className="story-name-time">2일전</p>
                 </div>
               </div>
             </div>
@@ -84,30 +82,30 @@ function MainIkHyun() {
                 <img src="/images/ikhyunKim/recommend1.jpg" alt="" />
               </div>
               <div className="recommend-name">
-                <p style={{ fontWeight: 'bold' }}>joaaaaaahye</p>
-                <p style={{ color: 'gray' }}>_legend_a님 외 2명이 ...</p>
+                <p className="recommend-name-id">joaaaaaahye</p>
+                <p className="recommend-name-plus">_legend_a님 외 2명이 ...</p>
               </div>
-              <div style={{ color: 'rgba(34, 112, 214, 0.871)' }}>팔로우</div>
+              <div className="recommend-follow">팔로우</div>
             </div>
             <div className="recommendimg-and-name">
               <div className="recommend-imgbox">
                 <img src="/images/ikhyunKim/recommend2.jpg" alt="" />
               </div>
               <div className="recommend-name">
-                <p style={{ fontWeight: 'bold' }}>rampart81</p>
-                <p style={{ color: 'gray' }}>ringo.in.seoul님 외 12...</p>
+                <p className="recommend-name-id">rampart81</p>
+                <p className="recommend-name-plus">ringo.in.seoul님 외 12...</p>
               </div>
-              <div style={{ color: 'rgba(34, 112, 214, 0.871)' }}>팔로우</div>
+              <div className="recommend-follow">팔로우</div>
             </div>
             <div className="recommendimg-and-name">
               <div className="recommend-imgbox">
                 <img src="/images/ikhyunKim/recommend3.jpg" alt="" />
               </div>
               <div className="recommend-name">
-                <p style={{ fontWeight: 'bold' }}>shawnjjoo</p>
-                <p style={{ color: 'gray' }}>jimmylee1220님 외 1...</p>
+                <p className="recommend-name-id">shawnjjoo</p>
+                <p className="recommend-name-plus">jimmylee1220님 외 1...</p>
               </div>
-              <div style={{ color: 'rgba(34, 112, 214, 0.871)' }}>팔로우</div>
+              <div className="recommend-follow">팔로우</div>
             </div>
           </div>
           <p className="westagram-info">

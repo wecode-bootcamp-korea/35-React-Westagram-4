@@ -87,6 +87,13 @@ main {
           display: flex;
           flex-direction: column;
           margin-left: 15px;
+
+          .story-name-id {
+            font-weight: bold;
+          }
+          .story-name-time {
+            color: gray;
+          }
         }
       }
     }
@@ -128,6 +135,17 @@ main {
           height: 100%;
           border-radius: 50%;
         }
+      }
+      .recommend-name {
+        .recommend-name-id {
+          font-weight: bold;
+        }
+        .recommend-name-plus {
+          color: gray;
+        }
+      }
+      .recommend-follow {
+        color: rgba(34, 112, 214, 0.871);
       }
     }
   }

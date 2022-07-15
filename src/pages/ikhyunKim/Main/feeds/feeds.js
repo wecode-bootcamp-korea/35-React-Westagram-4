@@ -29,7 +29,7 @@ function Feeds() {
             </div>
             <div className="article-icon-bar">
               <div className="article-icon">
-                <i className="fa-solid fa-heart" style={{ color: 'red' }} />
+                <i className="fa-solid fa-heart" />
                 <i className="fa-regular fa-comment" />
                 <i className="fa-solid fa-arrow-up-from-bracket" />
               </div>

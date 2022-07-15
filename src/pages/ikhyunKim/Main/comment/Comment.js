@@ -35,18 +35,12 @@ export default function Comment() {
           </p>
         </div>
         <div className="comment-id-comment">
-          <p style={{ fontWeight: 'bold' }} className="user-id1">
-            canon_mj
-          </p>
+          <p className="user-id1">canon_mj</p>
           <p className="user-commnet">위워크에서 진행한 베이킹 클래스...</p>
-          <p className="more-info" style={{ color: 'gray' }}>
-            더 보기
-          </p>
+          <p className="more-info">더 보기</p>
         </div>
         <div className="comment-id-comment">
-          <p style={{ fontWeight: 'bold' }} className="user-id2">
-            neceosecius
-          </p>
+          <p className="user-id2">neceosecius</p>
           <p className="user-commnet">거봐 좋았잖아~~~~~🙆🏻‍♀️</p>
         </div>
         <div className="create-comment-div">
