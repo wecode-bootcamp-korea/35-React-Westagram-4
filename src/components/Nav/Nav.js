@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Search from '../Search/Search';
 import './Nav.scss';
 function Nav() {
+  const [makeUserWindow, setMakeUserWindow] = useState('none');
+  const [userSearchData, setUserSearchData] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/data.json', {
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(result => setUserSearchData(result));
+  }, []);
+  const updateUserWindow = () => {
+    makeUserWindow === 'none'
+      ? setMakeUserWindow('flex')
+      : setMakeUserWindow('none');
+  };
+
   return (
     <div className="nav">
       <div className="nav-fix">
@@ -14,9 +31,16 @@ function Nav() {
             <span>|</span>Westagram
           </p>
         </div>
-        <div className="nav-search">
-          <input className="search-bar" type="text" placeholder="🔍 검색" />
-          <div className="search-info">
+        <Search userSearchData={userSearchData} />
+        {/* <div className="nav-search">
+          <input
+            className="search-bar"
+            onClick={updateSearchWindow}
+            type="text"
+            placeholder="🔍 검색"
+            onChange={updateUserInput}
+          />
+          <div className="search-info" style={{ display: makeSearchWindow }}>
             <div className="info-box">
               <div className="search-info-imgbox">
                 <img
@@ -30,7 +54,7 @@ function Nav() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="nav-icons">
           <div className="nav-icon_underdot">
             <img
@@ -48,11 +72,12 @@ function Nav() {
           </div>
           <div className="nav-icon_underdot">
             <img
+              onClick={updateUserWindow}
               className="user-icon"
               src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
               alt=""
             />
-            <div className="user-info">
+            <div className="user-info" style={{ display: makeUserWindow }}>
               <p className="info-profile">
                 <i className="fa-regular fa-circle-user" />
                 <span>프로필</span>

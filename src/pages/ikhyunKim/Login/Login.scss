@@ -1,0 +1,61 @@
+$border-color: rgb(185, 184, 184);
+$background-color: #489cff;
+$forget-password: #144970;
+
+.login-box {
+  display: flex;
+  justify-content: center;
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    border: 1px solid $border-color;
+    margin: 100px 50px;
+
+    h1 {
+      font-size: 60px;
+      font-family: 'Lobster', cursive;
+      margin: 40px;
+      font-weight: normal;
+    }
+    .login-id,
+    .login-password {
+      background-color: rgba(237, 235, 235, 0.686);
+      border: 1px solid $border-color;
+      border-radius: 3px;
+      height: 30px;
+      width: 300px;
+      margin: 5px;
+      padding: 10px;
+      font-size: 15px;
+    }
+
+    .login-button {
+      background-color: $background-color;
+      border: none;
+      border-radius: 3px;
+      margin: 20px;
+      width: 320px;
+      padding: 10px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      opacity: 0.5;
+    }
+
+    .login-forget_password {
+      color: $forget-password;
+      font-weight: bold;
+      margin-top: 60px;
+      margin-bottom: 30px;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+main {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+}
+
+/* 오른쪽 사이드 스토리 및 추천친구 */
+.main-right {
+  width: 280px;
+  margin-top: 20px;
+  position: sticky;
+  height: fit-content;
+  top: 100px;
+
+  .wecode-top {
+    display: flex;
+    align-items: center;
+    width: 300px;
+
+    .wecode-logo {
+      width: 50px;
+      height: 50px;
+      margin: 0 15px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .wecode-name {
+      .wecode-bootcamp {
+        font-weight: bold;
+      }
+      .wecode-tag {
+        color: gray;
+      }
+    }
+  }
+
+  .main-right-story {
+    .story-main {
+      margin: 10px;
+      border: 1px solid rgb(185, 184, 184);
+      background-color: #fff;
+      height: 250px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .story-top {
+        display: flex;
+        justify-content: space-between;
+
+        .story-top-gray {
+          color: gray;
+          margin: 10px;
+        }
+
+        .story-top-black {
+          margin: 10px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+
+      .storyimg-and-name {
+        margin: 10px;
+        display: flex;
+
+        .storyimg-box {
+          width: 30px;
+          height: 30px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid rgb(239, 103, 125);
+          }
+        }
+
+        .story-name {
+          display: flex;
+          flex-direction: column;
+          margin-left: 15px;
+
+          .story-name-id {
+            font-weight: bold;
+          }
+          .story-name-time {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+
+  .recommend {
+    margin: 10px;
+    border: 1px solid rgb(185, 184, 184);
+    background-color: #fff;
+    height: 200px;
+
+    .recommend-top {
+      display: flex;
+      justify-content: space-between;
+
+      .recommend-top-gray {
+        color: gray;
+        margin: 10px;
+      }
+
+      .recommend-top-black {
+        margin: 10px;
+        font-weight: bold;
+      }
+    }
+
+    .recommendimg-and-name {
+      margin: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .recommend-imgbox {
+        width: 30px;
+        height: 30px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      .recommend-name {
+        .recommend-name-id {
+          font-weight: bold;
+        }
+        .recommend-name-plus {
+          color: gray;
+        }
+      }
+      .recommend-follow {
+        color: rgba(34, 112, 214, 0.871);
+      }
+    }
+  }
+
+  .westagram-info {
+    color: gray;
+    font-size: 12px;
+    margin-left: 12px;
+  }
+}
+
+/* 댓글 입력시 생성되는 요소의 스타일 */
+.create-comment {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 10px;
+
+  .new-comment {
+    .user-id {
+      font-weight: bold;
+      margin-right: 7px;
+    }
+  }
+
+  .delete-heart {
+    display: none;
+
+    i {
+      margin-left: 10px;
+      color: gray;
+
+      &:hover {
+        color: rgba(34, 112, 214, 0.871);
+      }
+    }
+  }
+
+  &:hover .delete-heart {
+    display: block;
+  }
+}
+
+/* 모바일 동작시 나오는 푸터바 */
+.nav-footer {
+  display: none;
+}
+
+/* 모바일 및 850픽셀 밑에서 동작하는 CSS */
+@media screen and (max-width: 850px) {
+  * {
+    max-width: 100%;
+  }
+  .main-right {
+    display: none;
+  }
+
+  .feeds .article {
+    width: 390px;
+  }
+  .feeds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feeds .article .article-main-imgbox {
+    width: 390px;
+    height: 450px;
+  }
+  .feeds .article {
+    margin: 0 0 30px;
+  }
+
+  .nav-footer {
+    display: flex;
+    bottom: 0;
+    position: sticky;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    border-top: 1px solid rgb(185, 184, 184);
+    z-index: 10;
+    background-color: #fafafa;
+    font-size: 30px;
+  }
+  .nav-footer i:hover {
+    color: rgb(0, 115, 255);
+  }
+}
