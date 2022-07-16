@@ -1,0 +1,36 @@
+.info-box {
+  display: flex;
+  align-items: center;
+
+  height: 90px;
+  margin: 10px 0;
+
+  .search-info-imgbox {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .search-info-idandnick {
+    display: flex;
+    flex-direction: column;
+
+    .search-info-first {
+      font-size: 15px;
+    }
+
+    .search-info-id {
+      font-weight: bold;
+    }
+
+    .search-info-nickname {
+      color: gray;
+    }
+  }
+}

@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Search from '../Search/Search';
 import './Nav.scss';
 function Nav() {
   const [makeUserWindow, setMakeUserWindow] = useState('none');
-  const [makeSearchWindow, setMakeSearchWindow] = useState('none');
+  const [userSearchData, setUserSearchData] = useState([]);
 
+  useEffect(() => {
+    fetch('/data/data.json', {
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(result => setUserSearchData(result));
+  }, []);
   const updateUserWindow = () => {
     makeUserWindow === 'none'
       ? setMakeUserWindow('flex')
       : setMakeUserWindow('none');
-  };
-
-  const updateSearchWindow = () => {
-    makeSearchWindow === 'none'
-      ? setMakeSearchWindow('flex')
-      : setMakeSearchWindow('none');
   };
 
   return (
@@ -29,12 +31,14 @@ function Nav() {
             <span>|</span>Westagram
           </p>
         </div>
-        <div className="nav-search">
+        <Search userSearchData={userSearchData} />
+        {/* <div className="nav-search">
           <input
             className="search-bar"
             onClick={updateSearchWindow}
             type="text"
             placeholder="🔍 검색"
+            onChange={updateUserInput}
           />
           <div className="search-info" style={{ display: makeSearchWindow }}>
             <div className="info-box">
@@ -50,7 +54,7 @@ function Nav() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="nav-icons">
           <div className="nav-icon_underdot">
             <img
