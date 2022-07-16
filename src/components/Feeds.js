@@ -78,6 +78,7 @@ function Feeds({ feedData }) {
           </div>
 
           {comment.map((data, i) => {
+            // console.log(comment);
             return (
               <YourComment
                 key={data + i}
