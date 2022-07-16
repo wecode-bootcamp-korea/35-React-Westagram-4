@@ -1,0 +1,70 @@
+@import '../../../styles/variables.scss';
+
+body {
+  background-color: $white-color;
+  // height: 1000px;
+  @include layout;
+}
+
+.Login {
+  background-color: $white-color;
+  position: relative;
+  margin: auto;
+  border: $border-style;
+  width: 600px;
+  height: 700px;
+  @include layout($justify: null);
+  flex-direction: column;
+
+  a {
+    color: black;
+  }
+
+  .logo {
+    font-family: 'Lobster', cursive;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 70px;
+    text-align: center;
+  }
+
+  input.id,
+  input.password {
+    background-color: $light-gray-color;
+    margin: 5px;
+    padding: 10px;
+    border: $border-style;
+    border-radius: 7px;
+    width: 75%;
+    height: 9.5%;
+    font-size: 20px;
+  }
+
+  button {
+    background-color: #bee2fd;
+    color: $white-color;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid #bee2fd;
+    border-radius: 7px;
+    margin: 20px;
+    width: 75%;
+    height: 8%;
+  }
+
+  .activated {
+    background-color: blue;
+  }
+
+  .deactivated {
+    background-color: #bee2fd;
+  }
+
+  .notice {
+    position: absolute;
+    color: #00376b;
+    font-size: 20px;
+    text-align: center;
+    bottom: 40px;
+  }
+}

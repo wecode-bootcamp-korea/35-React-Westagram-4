@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "avatarImg": "./images/jeongeunNoh/right1.jpeg",
+    "avatarName": "avartarId1__",
+    "feedImg": "./images/jeongeunNoh/img2.jpeg",
+    "content": "아바타1 피드이미지 댓글 다는 중....",
+    "friendName": "friendId1__",
+    "friendComment": "친구1 댓글 달았다."
+  },
+  {
+    "id": 2,
+    "avatarImg": "./images/jeongeunNoh/right2.jpeg",
+    "avatarName": "avartarId2__",
+    "feedImg": "./images/jeongeunNoh/img1.jpeg",
+    "content": "아바타2 피드이미지 댓글 다는 중...",
+    "friendName": "friendId2__",
+    "friendComment": "친구2 댓글 달았다."
+  },
+  {
+    "id": 3,
+    "avatarImg": "./images/jeongeunNoh/right3.jpeg",
+    "avatarName": "avartarId3__",
+    "feedImg": "./images/jeongeunNoh/img3.jpeg",
+    "content": "아바타3 피드이미지 댓글 다는 중...",
+    "friendName": "friendId3__",
+    "friendComment": "친구3 댓글 달았다."
+  }
+]
